@@ -1,0 +1,20 @@
+#login-page {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  width: 366;
+  height: 155;
+  padding: 25%;
+  margin: 5% 15% 15% 15%;
+  font-size: 1.5em;
+}
+
+.inputField {
+  margin: 5%;
+}
+
+.login-page-btn {
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
