@@ -23,7 +23,7 @@ export const firebaseConfig = {
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     FormsModule,
     HttpModule,
     routing,
