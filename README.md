@@ -1,27 +1,46 @@
 # OurChat
+##### Social Network App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### By Jean Jia, Lan Dam, Hisato Kawaminami, Anousone Kaseumsouk, 08/27/2018
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is a social networking website where users may create an account and chat with other users. User can chat and post to public blog.
 
-## Code scaffolding
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+XXX
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Technologies Used
 
-## Running unit tests
+Application: Angular, TypeScript, Firebase
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Support and Contact
 
-## Running end-to-end tests
+For any questions or support details, please email:
+jean84646@gmail.com  
+hisatokawaminami@gmail.com  
+ldam77@yahoo.com  
+anousonekaseumsouk@icloud.com  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Spec
 
-## Further help
+* A user should be able to create an account with username and password.
+* A user should be able to sign in and sign out.
+* A user should be able to edit user profile.
+* A user should be able to add other users to the contact list by XXX.
+* A user should be able to see their contact list.
+* A user should be able to initiate a conversation with another user on the contact list.
+* A user should be able to see their current conversation list.
+* In the current conversations list, if user click on the conversation name should be able to see conversation history with that particular user.
+* The app should have a public blog section where user can post public messages and photos.
+* Public blog section should display all messages and photos by latest post.
+* A user may delete their own public blog post.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Legal
+
+Copyright (c) 2018 **Jean Jia, Lan Dam, Hisato Kawaminami, Anousone Kaseumsouk**
+
+This software is licensed under the MIT license.

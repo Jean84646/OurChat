@@ -1,0 +1,33 @@
+#login-page {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding: 20% 25% 25% 25%;
+  margin: 5% 15% 15% 15%;
+  font-size: 1.5em;
+  border-radius: 1%;
+}
+
+.inputField {
+  margin: 5% 0% 5% -20%;
+}
+
+.input-login {
+  padding: 2% 0% 2% 10%;
+  outline: 0;
+  border-radius: 7.5px;
+  border: none;
+}
+
+#userPass {
+  margin-bottom: 5%;
+}
+
+.login-page-btn {
+  font-size: 22px;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 7.5px;
+  border: none;
+}
