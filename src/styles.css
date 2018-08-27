@@ -1,12 +1,12 @@
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  text-align: center;
   background-image: url(./assets/img/landing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
 }
 
-h1 {
-  margin-top: 10%;
+#logo {
+  width: 20%;
+  margin: 5%;
 }
