@@ -15,6 +15,7 @@
   padding: 2% 0% 2% 10%;
   outline: 0;
   border-radius: 7.5px;
+  border: none;
 }
 
 #userPass {
@@ -22,9 +23,11 @@
 }
 
 .login-page-btn {
-  padding-left: 3%;
-  padding-right: 3%;
+  font-size: 22px;
+  padding-left: 4%;
+  padding-right: 4%;
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 7.5px;
+  border: none;
 }
