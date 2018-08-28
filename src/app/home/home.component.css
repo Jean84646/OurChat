@@ -1,0 +1,20 @@
+.nav-bar {
+  text-align: center;
+  background-color: grey;
+  padding: 3%;
+  border: 2px solid black;
+}
+
+#nav-list li {
+  list-style-type: none;
+  text-align: left;
+}
+
+#navbar a {
+  margin: 3%;
+  color: black;
+}
+
+#main-content {
+  background-color: #FFF;
+}
