@@ -1,8 +1,22 @@
 
 <div>
-<ul class="nav flex-column" *ngFor=" let user of users | async">
-  <li class="nav-item">
-    <a class="nav-link active">{{user.contacts}}</a>
-  </li>
-</ul>
+  <ul class="nav flex-column" >
+    <div class="info">
+      <h2>Austin</h2>
+      <img src="../assets/img/austin.jpg"/>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="searchText">
+
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" id="searchName">Search</button>
+      </div>
+
+    </div>
+    <li class="nav-item" *ngFor="let user of users | contact : searchText">
+      <a class="nav-link active" *ngFor="let contact of user.contacts">{{contact}}</a>
+    </li>
+    <!-- <li *ngFor="let contact of contscts | searchedContacts"> -->
+
+  </ul>
 </div>

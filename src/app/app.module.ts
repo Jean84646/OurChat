@@ -14,6 +14,7 @@ import { BlogComponent } from './blog/blog.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserService } from './user.service';
+import { ContactPipe } from './contact.pipe';
 
 
 export const firebaseConfig = {
@@ -30,7 +31,9 @@ export const firebaseConfig = {
     HomeComponent,
     BlogComponent,
     SignUpComponent,
-    ContactComponent
+    ContactComponent,
+    ContactPipe
+    // ContactPipe
   ],
   imports: [
     BrowserModule,
