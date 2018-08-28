@@ -1,5 +1,21 @@
-<h1>Current User: {{ user?.username }}</h1>
-<a routerLink="/home">Chats</a><br>
-<a routerLink="/contacts">Contacts</a><br>
-<a routerLink="/blog">Blogs</a><br>
-<button (click)="logOut()" type="button" id="create-btn" class="login-page-btn">Log Out</button>
+
+<div class="row">
+  <div id="navbar" class="col-md-3 card" >
+    <div id="nav-btn" class="nav-bar card-title">
+      <a routerLink="/home">Chats</a>
+      <a routerLink="/contacts">Contacts</a>
+      <a routerLink="/blog">Blogs</a>
+    </div>
+    <div id="nav-list" class="nav-bar card-body">
+      <ul>
+        <li>List goes here</li>
+      </ul>
+    </div>
+  </div>
+  <div id="main-content" class="col-md-9 card">
+    <ul>
+      <li>this is the conversation part!</li>
+    </ul>
+  </div>
+  <button (click)="logOut()" type="button" id="create-btn" class="login-page-btn">Log Out</button>
+</div>
