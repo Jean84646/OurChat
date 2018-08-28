@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   users: User[];
-  isLoggedIn: boolean = false;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
@@ -26,12 +26,12 @@ export class LoginComponent implements OnInit {
     for(let i = 0; i < this.users.length; i++) {
       if (this.users[i].username == userName) {
         if (this.users[i].password == userPass) {
-          this.isLoggedIn = true;
+          this.userService.isLoggedIn = true;
           this.userService.currentUser = this.users[i];
         }
       }
     }
-    if (this.isLoggedIn) {
+    if (this.userService.isLoggedIn) {
       console.log("Current User: "+ this.userService.getCurrentUser().username);
       this.router.navigate(['home']);
     } else {
