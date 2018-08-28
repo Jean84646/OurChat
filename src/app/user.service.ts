@@ -18,7 +18,18 @@ export class UserService {
     return this.users;
   }
 
+<<<<<<< HEAD
   // setCurrentUser(user) {
   //   this.user.next(user);
   // }
+=======
+  getCurrentUser() {
+    return this.currentUser;
+  }
+
+  setCurrentUser(user: User) {
+    this.currentUser = user;
+  }
+
+>>>>>>> 0025d26d64338e0b6372644297284641ccec4cf5
 }

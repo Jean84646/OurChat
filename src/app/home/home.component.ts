@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  providers: [UserService]
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+<<<<<<< HEAD
   users: User[];
   @Input() user: User;
 
@@ -25,6 +25,14 @@ export class HomeComponent implements OnInit {
    });
  }
 
+=======
+  user: User;
+  constructor(private userService: UserService, private router: Router) { }
+
+  ngOnInit() {
+    this.user = this.userService.getCurrentUser();
+  }
+>>>>>>> 0025d26d64338e0b6372644297284641ccec4cf5
 
   logOut() {
     // this.userService.isLoggedIn = false;
