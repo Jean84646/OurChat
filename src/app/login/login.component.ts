@@ -26,12 +26,12 @@ export class LoginComponent implements OnInit {
       if (this.users[i].username == userName) {
         if (this.users[i].password == userPass) {
           this.isLoggedIn = true;
+          this.userService.currentUser = this.users[i];
         }
       }
     }
     if (this.isLoggedIn) {
-      // route to home
-      alert("Login is good");
+      alert("Current User: "+ this.userService.getCurrentUser().username);
     } else {
       alert("Incorrect username/password");
     }
