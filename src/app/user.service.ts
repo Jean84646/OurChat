@@ -20,4 +20,8 @@ export class UserService {
     return this.currentUser;
   }
 
+  setCurrentUser(user: User) {
+    this.currentUser = user;
+  }
+
 }
