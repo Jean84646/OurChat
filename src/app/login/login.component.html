@@ -6,7 +6,9 @@
     <div class="inputField">
       <input type="text" id="userPass" class="input-login" placeholder="Password" #userPass>
     </div>
-    <button type="button" id="create-btn" class="login-page-btn">Sign Up</button>
-    <button (click)="checkLogin(userName.value, userPass.value)" type="submit" id="login-btn" class="login-page-btn">Sign In</button>
+    <div id="button-login">
+      <button (click)="signUp()" type="button" id="create-btn" class="login-page-btn">Sign Up</button>
+      <button (click)="checkLogin(userName.value, userPass.value)" type="submit" id="login-btn" class="login-page-btn">Sign In</button>
+    </div>
   </form>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { UserService } from '../user.service';
 export class LoginComponent implements OnInit {
   users: User[];
   isLoggedIn: boolean = false;
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
@@ -26,15 +27,20 @@ export class LoginComponent implements OnInit {
       if (this.users[i].username == userName) {
         if (this.users[i].password == userPass) {
           this.isLoggedIn = true;
+          this.userService.currentUser = this.users[i];
         }
       }
     }
     if (this.isLoggedIn) {
-      // route to home
-      alert("Login is good");
+      console.log("Current User: "+ this.userService.getCurrentUser().username);
+      this.router.navigate(['home']);
     } else {
       alert("Incorrect username/password");
     }
+  }
+
+  signUp() {
+    this.router.navigate(['signup']);
   }
 
 }
