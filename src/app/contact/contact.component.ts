@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../user.service';
+import { ContactPipe } from '../contact.pipe';
 
 @Component({
   selector: 'app-contact',
@@ -10,11 +11,15 @@ import { UserService } from '../user.service';
 })
 export class ContactComponent implements OnInit {
 
-  users: FirebaseListObservable<any[]>;
+  users;
+  contacts;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.users = this.userService.getUsers()
+     this.userService.getUsers().subscribe(dataLastEmitted => {
+        this.users = dataLastEmitted;
+    });
   }
+
 
 }

@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
   providers: [UserService]
 })
 export class HomeComponent implements OnInit {
+  user:User;
 
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
+    this.user = this.userService.getCurrentUser();
   }
 
   logOut() {
