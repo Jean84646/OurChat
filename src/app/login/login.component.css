@@ -1,14 +1,15 @@
 #login-page {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 20% 25% 25% 25%;
-  margin: 0% 15% 15% 15%;
-  font-size: 1.5em;
+  font-size: 1em;
   border-radius: 1%;
 }
 
 .inputField {
-  margin: 5% 0% 5% -20%;
+  /* margin: 5% 0% 5% -35%; */
+  margin-bottom: 7%;
+  text-align: center;
 }
 
 .input-login {
@@ -16,18 +17,23 @@
   outline: 0;
   border-radius: 7.5px;
   border: none;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 #userPass {
   margin-bottom: 5%;
 }
 
+#button-login {
+  margin-top: -7%;
+  text-align: center;
+}
+
 .login-page-btn {
-  font-size: 22px;
-  padding-left: 4%;
-  padding-right: 4%;
-  margin-left: 2%;
-  margin-right: 2%;
+  font-size: 15px;
   border-radius: 7.5px;
   border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #8e8e8e;
+  font-weight: 35px;
 }
