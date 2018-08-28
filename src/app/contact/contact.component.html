@@ -1,0 +1,8 @@
+
+<div>
+<ul class="nav flex-column" *ngFor=" let user of users | async">
+  <li class="nav-item">
+    <a class="nav-link active">{{user.contacts}}</a>
+  </li>
+</ul>
+</div>
