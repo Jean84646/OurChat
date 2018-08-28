@@ -1,0 +1,32 @@
+{
+  "blogs" : [ {
+      "post" : {
+        "picture" : "",
+        "discription" : "",
+        "time" : ""
+      }
+  } ],
+  "users" : [ {
+    "blogKey" : "",
+    "chatKeys" : [""],
+    "contacts" : ["admin", "person1"],
+    "password" : "test",
+    "username" : "person2"
+  }, {
+    "blogKey" : "",
+    "chatKeys" : [""],
+    "contacts" : ["admin", "person2"],
+    "password" : "test",
+    "username" : "person1"
+  }, {
+    "blogKey" : "",
+    "chatKeys" : [""],
+    "contacts" : ["person1", "person2"],
+    "password" : "test",
+    "username" : "admin"
+  } ],
+  "chats" : [ {
+    "users" : [""],
+    "messages" : [""]
+  } ]
+}
