@@ -1,8 +1,6 @@
-.nav-bar {
+.card-title {
   text-align: center;
-  background-color: grey;
-  padding: 3%;
-  border: 2px solid black;
+  vertical-align: middle;
 }
 
 #nav-list li {
