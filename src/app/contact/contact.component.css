@@ -1,9 +1,11 @@
 .nav{
-  background-color: black;
+  background:linear-gradient(to right, #232526, #414345);
   color: #fff;
-  max-width: 380px;
-  height: 750px;
+  border-radius: 1%;
+  max-width: 275px;
+  height: 800px;
   padding: 10px 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .nav img{
@@ -20,4 +22,24 @@
 
 .info h2{
   margin-top: 20px;
+}
+
+.form-control {
+  background:linear-gradient(to right, #232526, #414345);
+  color: #fff;
+  border-style: none;
+}
+
+.form-control:after {;
+  color: #fff;
+}
+
+button {
+  background:linear-gradient(to right, #232526, #414345);
+  color:#8e8e8e;
+  border-style: none;
+}
+
+button:hover {
+  color: #4A90E2;
 }

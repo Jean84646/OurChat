@@ -4,12 +4,11 @@
 }
 
 #navbar {
-  /*background:linear-gradient(to right, #bdc3c7, #2c3e50);*/
   background:linear-gradient(to right, #232526, #414345);
   color: #FFF;
   border-style: none;
   height: 800px;
-    border-radius: 1%;
+  border-radius: 1%;
 }
 
 #nav-list li {
@@ -24,9 +23,7 @@
 }
 
 #main-content {
-  /*background:linear-gradient(to right, #ece9e6, #ffffff);*/
   border-style: none;
-  /*border-radius: 1%*/
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -35,7 +32,6 @@
 }
 
 #chat-input {
-  /*margin-top: 75%;*/
   height: 200px;
   width: 100%;
   border-style: none;
