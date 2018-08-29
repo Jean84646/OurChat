@@ -13,7 +13,7 @@ import { Chat, Message } from '../models/chat';
   providers: [ChatService]
 })
 export class HomeComponent implements OnInit {
-  users: User[];
+  users;
   chat;
   messages: Message[];
   user;
@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit {
   constructor(private userService: UserService, private chatService: ChatService, private router: Router) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
-      this.users = dataLastEmittedFromObserver;
-    });
-
+    // this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
+    //   this.users = dataLastEmittedFromObserver;
+    // });
+    this.users = this.userService.getUsers();
     this.chat = this.chatService.getChatByKey(this.chatKey);
     this.user = this.userService.getCurrentUser();
     this.chat.subscribe(content => {
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   getName(userKey: string) {
-    return this.users[parseInt(userKey)].username;
+
   }
 
   sentText(message: string) {

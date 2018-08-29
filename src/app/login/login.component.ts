@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
       this.users = dataLastEmittedFromObserver;
       console.log(this.users);
-   });   
+   });
  }
   checkLogin(userName, userPass){
     for(let i = 0; i < this.users.length; i++) {

@@ -23,10 +23,10 @@ export class ContactComponent implements OnInit {
         this.contacts = this.user.contacts;
         for(let i = 0; i < this.user.contacts.length; i++) {
           this.contacts[i] = this.users[parseInt(this.user.contacts[i])].username;
+        }
     });
 
   }
-
-console.log(this.contacts);
-}
+//
+// console.log(this.contacts);
 }
