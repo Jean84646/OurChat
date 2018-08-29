@@ -10,17 +10,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  user:User;
+  users: User[];
+  user: User;
+
 
   constructor(private userService: UserService, private router: Router) { }
 
+
   ngOnInit() {
+
     this.user = this.userService.getCurrentUser();
   }
 
+
   logOut() {
-    // this.userService.isLoggedIn = false;
-    // this.userService.currentUser = null;
+    this.userService.isLoggedIn = false;
+    this.userService.currentUser = null;
     this.router.navigate(['']);
   }
 }
