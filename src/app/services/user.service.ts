@@ -18,8 +18,6 @@ export class UserService {
     return this.users;
   }
 
-  //to return an array of users that are contacts of the given user.
-
   getContacts(userKey: number){
     var contacts = [];
     var users = [];
@@ -33,7 +31,6 @@ export class UserService {
     return users;
   }
 
-
   getCurrentUser() {
     return this.currentUser;
   }
@@ -46,6 +43,11 @@ export class UserService {
     let blogKey = blogs.push(newBlog).key;
     let newUser = new User(username,password,[],[],blogKey);
     this.users.push(newUser);
+  }
+
+  getUser(contactKey: string)
+  {
+    return this.users;
   }
 
 }
