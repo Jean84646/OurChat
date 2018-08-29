@@ -33,14 +33,12 @@ export class BlogComponent implements OnInit
    });
   }
 
-  addBlog()
-  {
-    var newBlog = new Blog();
-    newBlog.addPost('test description');
-    console.log(newBlog);
-    this.blogService.addBlog(newBlog);
-    console.log(this.blogService.lastInstertedBlogKey);
-  }
+  // addBlog()
+  // {
+  //   var newBlog = new Blog();
+  //   newBlog.addPost('test description');
+  //   this.blogService.addBlog(newBlog);
+  // }
 
   timeSince(postTime: string)
   {

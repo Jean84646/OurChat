@@ -15,6 +15,7 @@ export class BlogService {
     return this.blogs;
   }
 
+  //depreceated addBlogs via user.services on new user creation
   addBlog(newBlog: Blog) {
     this.lastInstertedBlogKey = this.blogs.push(newBlog).key;
   }
