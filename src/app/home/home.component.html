@@ -7,6 +7,7 @@
         <a routerLink="/blog">Blogs</a>
       </div>
       <div id="nav-list" class="nav-bar card-body">
+
         <ul>
           <li>List goes here</li>
         </ul>
@@ -14,13 +15,16 @@
     </div>
     <div id="main-content" class="col-md-9 card">
       <div id="chat-list">
-        <ul>
+        <div class="" *ngFor="let message of messages">
+          <h2>{{ getName(message.user) }}: {{ message.message }}</h2>
+        </div>
+        <!-- <ul>
           <li>this is the conversation part!</li>
-        </ul>
+        </ul> -->
       </div>
       <div id="chat-input">
         <textarea id="textArea" #textArea></textarea>
-          <button (click)="sendTex()" type="button" id="send-btn" class="login-page-btn">Send</button>
+          <button (click)="sendText(textArea.value); textArea.value=''" type="button" id="send-btn" class="login-page-btn">Send</button>
       </div>
     </div>
     <button (click)="logOut()" type="button" id="create-btn" class="login-page-btn">Log Out</button>

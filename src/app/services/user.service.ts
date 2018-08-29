@@ -7,6 +7,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class UserService {
   users: FirebaseListObservable<any[]>;
   currentUser: User;
+  currentUserKey: string;
   isLoggedIn: boolean = false;
 
   constructor(private database: AngularFireDatabase) {
