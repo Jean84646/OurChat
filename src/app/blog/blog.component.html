@@ -1,17 +1,50 @@
-<h1 class="jumbotron">{{currentUser.username}}'s Blog</h1>
-<div class="card center-text">
-  <div class="card-body">
-    <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
-  </div>
-  <div class="card-footer">
-    <button class="btn btn-submit" (click)="addPost(postText)">Add Post</button>
-  </div>
-</div>
-<div *ngFor="let post of posts">
-  <div class="card">
-    <div class="card-body">
-      <p>{{post.description}}</p>
-      <footer>Posted {{timeSince(post.time)}} ago.</footer>
+<div class="chatroom">
+  <div class="row">
+    <div id="navbar" class="col-md-3 card" >
+      <div class="contact-component">
+        <ul class="nav flex-column" >
+          <div class="info">
+            <h2>Austin</h2>
+            <img src="../assets/img/austin.jpg"/>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="searchText" placeholder="Search">
+            <div class="input-group-append">
+              <button class="searchButton" type="button" id="searchName"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+          <div class="routers">
+            <a routerLink="/home">| Chats</a>
+            <a routerLink="/contacts">| Contacts</a>
+            <a routerLink="/blog">| Blogs</a>
+          </div>
+          <li class="nav-item" *ngFor="let user of users | contact : searchText">
+            <a class="nav-link active" *ngFor="let contact of user.contacts">{{contact}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="main-content" class="col-md-9">
+      <div class="card">
+        <div class="card-title center-text">
+          <p>{{currentUser.username}}'s Blog</p>
+        </div>
+      </div>
+      <div class="card center-text">
+        <div class="card-body">
+          <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-submit" (click)="addPost(postText)">Add Post</button>
+        </div>
+      </div>
+      <div *ngFor="let post of posts">
+        <div class="card">
+          <div class="card-body">
+            <p>{{post.description}}</p>
+            <footer>Posted {{timeSince(post.time)}} ago.</footer>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>

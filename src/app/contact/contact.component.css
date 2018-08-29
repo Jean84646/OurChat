@@ -2,59 +2,12 @@
   background:linear-gradient(to right, #232526, #414345);
   border-style: none;
   border-radius: 1%;
-  }
-
-.nav{
-  background:linear-gradient(to right, #232526, #414345);
-  color: #FFF;
-  border-style: none;
-  height: 800px;
-  border-radius: 1%;
-}
-
-.nav img{
-  border-radius: 50%;
-  max-height: 100px;
-  max-width: 100px;
-  padding: 10px 10px;
-}
-
-.info{
-  display: flex;
-  justify-content: space-between;
-}
-
-.info h2{
-  margin-top: 20px;
-}
-
-.form-control {
-  background:linear-gradient(to right, #232526, #414345);
-  color: #fff;
-  border-style: none;
-}
-
-.form-control:after {
-  color: #fff;
 }
 
 .searchButton {
   background:linear-gradient(to right, #232526, #414345);
   color: #8e8e8e;
   border-style: none;
-}
-
-button:hover {
-  color: #4A90E2;
-}
-
-.routers {
-  text-align: center;
-}
-
-a {
-  color: #4A90E2;
-  font-size: 85%;
 }
 
 #chat{
