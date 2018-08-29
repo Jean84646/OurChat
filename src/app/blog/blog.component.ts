@@ -44,11 +44,35 @@ export class BlogComponent implements OnInit
 
   timeSince(postTime: string)
   {
-    console.log(postTime);
     let lastPostTime = new Date(postTime).getTime();
-    console.log(lastPostTime);
-    let diffInTime = Math.floor((Date.now() - lastPostTime)/60000);
-    return diffInTime;
+    let timeInMinutes = Math.floor((Date.now() - lastPostTime)/60000);
+    let timeInHours = Math.floor(timeInMinutes/60);
+    let timeInDays = Math.floor(timeInHours/24);
+    if(timeInDays > 1)
+    {
+      return timeInDays + " " + "days";
+    }
+    else if(timeInDays === 1)
+    {
+      return timeInDays + " " + "day";
+    }
+    else if(timeInHours > 1)
+    {
+      return timeInHours + " " + "hours";
+    }
+    else if(timeInHours === 1)
+    {
+      return timeInHours + " " + "hour";
+    }
+    else if(timeInMinutes > 1)
+    {
+      return timeInMinutes + " " + "minutes";
+    }
+    else if(timeInMinutes === 1)
+    {
+      return timeInHours + " " + "minute";
+    }
+    return "less than a minute";
   }
 
 }
