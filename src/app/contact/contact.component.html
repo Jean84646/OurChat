@@ -10,7 +10,7 @@
             <div class="input-group mb-3">
               <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="searchText" placeholder="Search">
               <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="searchName"><i class="fa fa-search"></i></button>
+                <button class="searchButton" type="button" id="searchName"><i class="fa fa-search"></i></button>
               </div>
             </div>
             <div class="routers">
@@ -26,8 +26,7 @@
         </div>
       </div>
       <div id="chat" class="col-md-9 card">
-        <ul>
-        </ul>
       </div>
+      <button (click)="logOut()" type="button" id="logout" class="logout">Log Out</button>
   </div>
 </div>

@@ -1,5 +1,7 @@
 .col-md-3{
   background:linear-gradient(to right, #232526, #414345);
+  border-style: none;
+  border-radius: 1%;
   }
 
 .nav{
@@ -32,13 +34,13 @@
   border-style: none;
 }
 
-.form-control:after {;
+.form-control:after {
   color: #fff;
 }
 
-button {
+.searchButton {
   background:linear-gradient(to right, #232526, #414345);
-  color:#8e8e8e;
+  color: #8e8e8e;
   border-style: none;
 }
 
@@ -63,4 +65,11 @@ a {
   border-radius: 4px;
   border-color: #a8aeb7;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.logout {
+  background:linear-gradient(to right, #ece9e6, #ffffff);
+  width: 8%;
+  border-radius: 3px;
+  color:#8e8e8e;
 }
