@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
       this.users = dataLastEmittedFromObserver;
-   });
+      console.log(this.users);
+   });   
  }
   checkLogin(userName, userPass){
     console.log(this.users);

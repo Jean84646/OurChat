@@ -7,18 +7,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class ContactPipe implements PipeTransform {
-  transform(users: any[], searchText: string): any[] {
-    if(!users) return [];
-    if(!searchText) return users;
+  transform(contacts: any[], searchText: string): any[] {
+    if(!contacts) return [];
+    if(!searchText) return contacts;
 
-    return users.filter(user => {
-      for(var i = 0; i < user.contacts.length; i++){
-        var contact = user.contacts[i].includes(searchText);
-        if(contact === true){
-          var person = user.contacts[i];
-        }
-      }
-      return person;
+    return contacts.filter(contact => {
+      return contact.includes(searchText);
     });
   }
 }

@@ -1,7 +1,17 @@
-<h1 class="jumbotron">Blog</h1>
-
+<h1 class="jumbotron">{{currentUser.username}}'s Blog</h1>
+<div class="card center-text">
+  <div class="card-body">
+    <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-submit" (click)="addPost(postText)">Add Post</button>
+  </div>
+</div>
 <div *ngFor="let post of posts">
   <div class="card">
-    <p class="card-body">{{post.description}}</p>
+    <div class="card-body">
+      <p>{{post.description}}</p>
+      <footer>Posted {{timeSince(post.time)}} ago.</footer>
+    </div>
   </div>
 </div>
