@@ -13,8 +13,6 @@ export class Blog
 
 export class Post
 {
-  time: string;
-  constructor(public description: string, public picture: string){
-    this.time = new Date().toString();
+  constructor(public description: string, public picture: string, public time: string = new Date().toString()){
   }
 }

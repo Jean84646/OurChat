@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['../app.component.css','./home.component.css']
 })
 export class HomeComponent implements OnInit {
   users: User[];
-  user: User;
+  user;
 
 
   constructor(private userService: UserService, private router: Router) { }
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.user = this.userService.getCurrentUser();
+    // console.log(this.user.$key);
   }
 
 

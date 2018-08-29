@@ -7,7 +7,7 @@ import { User } from '../models/user';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['../app.component.css','./contact.component.css']
 })
 export class ContactComponent implements OnInit
 {
@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit
   contacts: string[];
 
   constructor(private userService: UserService) { }
+
 
   ngOnInit()
   {
@@ -36,5 +37,4 @@ export class ContactComponent implements OnInit
       });
     });
     this.contacts = tempContacts;
-  }
 }
