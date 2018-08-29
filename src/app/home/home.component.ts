@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   users: User[];
   user: User;
+  chatKey: number = 0;
 
 
   constructor(private userService: UserService, private router: Router) { }
