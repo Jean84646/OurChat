@@ -33,4 +33,13 @@ export class BlogComponent implements OnInit
    });
   }
 
+  addBlog()
+  {
+    let newBlog = new Blog();
+    newBlog.addPost('test description','picture url');
+    console.log(newBlog);
+    this.blogService.addBlog(newBlog);
+    console.log(this.blogService.lastInstertedBlogKey);
+  }
+
 }
