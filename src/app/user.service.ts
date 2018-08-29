@@ -6,7 +6,7 @@ import * as Rx from "rxjs";
 @Injectable()
 export class UserService {
   users: FirebaseListObservable<any[]>;
-  currentUserIndex = new Rx.BehaviorSubject('');
+  currentUser: User;
   // currentUser = this.user.asObservable();
   // isLoggedIn: boolean = false;
 
@@ -18,11 +18,6 @@ export class UserService {
     return this.users;
   }
 
-<<<<<<< HEAD
-  // setCurrentUser(user) {
-  //   this.user.next(user);
-  // }
-=======
   getCurrentUser() {
     return this.currentUser;
   }
@@ -31,5 +26,4 @@ export class UserService {
     this.currentUser = user;
   }
 
->>>>>>> 0025d26d64338e0b6372644297284641ccec4cf5
 }

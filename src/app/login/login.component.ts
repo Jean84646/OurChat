@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       if (this.users[i].username == userName) {
         if (this.users[i].password == userPass) {
           this.isLoggedIn = true;
-          this.userService.currentUserIndex.next(i.toString());
+          this.userService.currentUser = this.users[i];
         }
       }
     }
