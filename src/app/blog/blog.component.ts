@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog, Post } from '../models/blog';
 import { BlogService } from '../services/blog.service';
+import { UserService } from '../services/user.service';
+import { User } from '../models/user';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
@@ -15,12 +17,15 @@ export class BlogComponent implements OnInit
   blogKey: string;
   blogToDisplay: Blog;
   posts: Post[];
+  currentUser: User;
 
-  constructor(private blogService: BlogService) { }
+
+  constructor(private blogService: BlogService, private userService: UserService) { }
 
   ngOnInit()
   {
-    this.blogKey = "0";
+    this.currentUser = this.userService.getCurrentUser();
+    this.blogKey = this.currentUser.blogKey;
     var foundBlog = this.blogService.getBlogByKey(this.blogKey);
     foundBlog.subscribe(returnedBlog => {
      this.blogToDisplay = returnedBlog;
