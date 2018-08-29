@@ -5,7 +5,6 @@ import { UserService } from '../services/user.service';
 import { User } from '../models/user';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
-
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -19,26 +18,30 @@ export class BlogComponent implements OnInit
   posts: Post[];
   currentUser: User;
 
-
   constructor(private blogService: BlogService, private userService: UserService) { }
 
   ngOnInit()
   {
+    let newPosts = [];
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
-    var foundBlog = this.blogService.getBlogByKey(this.blogKey);
+    let foundBlog = this.blogService.getBlogByKey(this.blogKey);
     foundBlog.subscribe(returnedBlog => {
-     this.blogToDisplay = returnedBlog;
-     this.posts = this.blogToDisplay.posts;
+      console.log(returnedBlog[0]);
+     this.blogToDisplay = returnedBlog[0];
+     for(var post in this.blogToDisplay)
+     {
+       let tempPost = this.blogToDisplay[post];
+       newPosts.push(tempPost);
+     }
+     this.posts = newPosts.reverse();
    });
   }
 
-  // addBlog()
-  // {
-  //   var newBlog = new Blog();
-  //   newBlog.addPost('test description');
-  //   this.blogService.addBlog(newBlog);
-  // }
+  addPost(description: string)
+  {
+    this.blogService.addPostToBlog(this.blogKey,description);
+  }
 
   timeSince(postTime: string)
   {

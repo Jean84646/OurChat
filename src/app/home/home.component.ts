@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   users: User[];
-  user: User;
+  user;
 
 
   constructor(private userService: UserService, private router: Router) { }
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.user = this.userService.getCurrentUser();
+    // console.log(this.user.$key);
   }
 
 
