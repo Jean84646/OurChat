@@ -1,6 +1,7 @@
 export class Blog
 {
-  constructor (public posts: Post[]) {}
+  posts: Post[];
+  constructor () {}
 
   addPost(description, picture)
   {
