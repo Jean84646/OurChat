@@ -19,14 +19,14 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
      this.userService.getUsers().subscribe(dataLastEmitted => {
         this.users = dataLastEmitted;
+        this.user = this.userService.getCurrentUser();
+        this.contacts = this.user.contacts;
+        for(let i = 0; i < this.user.contacts.length; i++) {
+          this.contacts[i] = this.users[parseInt(this.user.contacts[i])].username;
     });
-    this.user = this.userService.getCurrentUser();
-    this.contacts = this.user.contacts;
+
   }
 
-  ngDoCheck(){
-    for(let i = 0; i < this.user.contacts.length; i++) {
-      this.contacts[i] = this.users[parseInt(this.user.contacts[i])].username;
-  }
 console.log(this.contacts);
+}
 }

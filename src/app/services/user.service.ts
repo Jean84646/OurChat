@@ -18,8 +18,8 @@ export class UserService {
     return this.users;
   }
 
-<<<<<<< HEAD:src/app/user.service.ts
   //to return an array of users that are contacts of the given user.
+
   getContacts(userKey: number){
     var contacts = [];
     var users = [];
@@ -33,8 +33,7 @@ export class UserService {
     return users;
   }
 
-=======
->>>>>>> d7ffe1d5883954a51e5272e16b0d470ad69872d1:src/app/services/user.service.ts
+
   getCurrentUser() {
     return this.currentUser;
   }
