@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog, Post } from '../models/blog';
-import { BlogService } from '../blog.service';
+import { BlogService } from '../services/blog.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 
 
