@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Blog } from '../models/blog';
-import { User } from '../models/user';
+import { User } from './models/user';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
@@ -8,7 +7,6 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class UserService {
   users: FirebaseListObservable<any[]>;
   currentUser: User;
-  currentUserKey: string;
   isLoggedIn: boolean = false;
 
   constructor(private database: AngularFireDatabase) {
@@ -20,7 +18,6 @@ export class UserService {
   }
 
   //to return an array of users that are contacts of the given user.
-
   getContacts(userKey: number){
     var contacts = [];
     var users = [];
@@ -34,19 +31,8 @@ export class UserService {
     return users;
   }
 
-
   getCurrentUser() {
     return this.currentUser;
-  }
-
-  addUser(username: string,password: string)
-  {
-    let blogs = this.database.list('blogs');
-    var newBlog = new Blog();
-    newBlog.addPost('test description');
-    let blogKey = blogs.push(newBlog).key;
-    let newUser = new User(username,password,[],[],blogKey);
-    this.users.push(newUser);
   }
 
 }

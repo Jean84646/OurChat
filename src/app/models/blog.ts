@@ -1,9 +1,11 @@
 export class Blog
 {
   posts: Post[];
-  constructor () {}
+  constructor () {
+    this.posts = [];
+  }
 
-  addPost(description, picture)
+  addPost(description: string, picture: string = "")
   {
     this.posts.push(new Post(description, picture));
   }
@@ -11,8 +13,6 @@ export class Blog
 
 export class Post
 {
-  time;
-  constructor(public description: string, public picture: string){
-    this.time = new Date();
+  constructor(public description: string, public picture: string, public time: string = new Date().toString()){
   }
 }
