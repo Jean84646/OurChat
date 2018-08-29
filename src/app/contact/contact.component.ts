@@ -16,18 +16,18 @@ export class ContactComponent implements OnInit
   contacts: string[];
 
   constructor(private userService: UserService) { }
-
-
   ngOnInit()
   {
     let tempContacts = [];
     this.user = this.userService.getCurrentUser();
-    this.userService.getUsers().subscribe(userList => {
+    this.userService.getUsers().subscribe(userList =>
+      {
       this.users = userList;
       this.user = this.userService.getCurrentUser();
 
       this.contacts = this.user.contacts;
-      this.user.contacts.forEach(function(contactKey){
+      this.user.contacts.forEach(function(contactKey)
+      {
         userList.forEach(function(user){
           if(user.$key === contactKey)
           {
@@ -37,4 +37,5 @@ export class ContactComponent implements OnInit
       });
     });
     this.contacts = tempContacts;
+  }
 }
