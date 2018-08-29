@@ -9,24 +9,32 @@ import { User } from '../models/user';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
-
+export class ContactComponent implements OnInit
+{
   users;
   user: User;
-  contacts;
+  contacts: string[];
+
   constructor(private userService: UserService) { }
 
-  ngOnInit() {
-     this.userService.getUsers().subscribe(dataLastEmitted => {
-        this.users = dataLastEmitted;
-        this.user = this.userService.getCurrentUser();
-        this.contacts = this.user.contacts;
-        for(let i = 0; i < this.user.contacts.length; i++) {
-          this.contacts[i] = this.users[parseInt(this.user.contacts[i])].username;
+  ngOnInit()
+  {
+    let tempContacts = [];
+    this.user = this.userService.getCurrentUser();
+    this.userService.getUsers().subscribe(userList => {
+      this.users = userList;
+      this.user = this.userService.getCurrentUser();
+
+      this.contacts = this.user.contacts;
+      this.user.contacts.forEach(function(contactKey){
+        userList.forEach(function(user){
+          if(user.$key === contactKey)
+          {
+            tempContacts.push(user.username);
+          }
+        });
+      });
     });
-
+    this.contacts = tempContacts;
   }
-
-console.log(this.contacts);
-}
 }
