@@ -35,11 +35,20 @@ export class BlogComponent implements OnInit
 
   addBlog()
   {
-    let newBlog = new Blog();
-    newBlog.addPost('test description','picture url');
+    var newBlog = new Blog();
+    newBlog.addPost('test description');
     console.log(newBlog);
     this.blogService.addBlog(newBlog);
     console.log(this.blogService.lastInstertedBlogKey);
+  }
+
+  timeSince(postTime: string)
+  {
+    console.log(postTime);
+    let lastPostTime = new Date(postTime).getTime();
+    console.log(lastPostTime);
+    let diffInTime = Math.floor((Date.now() - lastPostTime)/60000);
+    return diffInTime;
   }
 
 }
