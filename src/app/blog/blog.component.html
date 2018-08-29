@@ -3,6 +3,7 @@
 <div *ngFor="let post of posts">
   <div class="card">
     <p class="card-body">{{post.description}}</p>
+    <p>Posted {{timeSince(post.time)}} minutes ago.</p>
   </div>
 </div>
 <div class="">
