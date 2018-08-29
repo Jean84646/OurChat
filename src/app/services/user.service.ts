@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Blog } from '../models/blog';
 import { User } from '../models/user';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
@@ -17,9 +18,18 @@ export class UserService {
     return this.users;
   }
 
-
   getCurrentUser() {
     return this.currentUser;
+  }
+
+  addUser(username: string,password: string)
+  {
+    let blogs = this.database.list('blogs');
+    var newBlog = new Blog();
+    newBlog.addPost('test description');
+    let blogKey = blogs.push(newBlog).key;
+    let newUser = new User(username,password,[],[],blogKey);
+    this.users.push(newUser);
   }
 
 }
