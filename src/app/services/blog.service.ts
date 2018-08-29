@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { Blog, Post } from './models/blog';
+import { Blog, Post } from '../models/blog';
 
 @Injectable()
 export class BlogService {
