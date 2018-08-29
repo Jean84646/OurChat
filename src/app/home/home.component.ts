@@ -9,7 +9,7 @@ import { Chat, Message } from '../models/chat';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['../app.component.css','./home.component.css'],
   providers: [ChatService]
 })
 export class HomeComponent implements OnInit {

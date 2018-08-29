@@ -8,7 +8,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css'],
+  styleUrls: ['../app.component.css','./blog.component.css'],
   providers: [BlogService]
 })
 export class BlogComponent implements OnInit
