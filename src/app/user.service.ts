@@ -17,6 +17,19 @@ export class UserService {
     return this.users;
   }
 
+  //to return an array of users that are contacts of the given user.
+  getContacts(userKey: number){
+    var contacts = [];
+    var users = [];
+    contacts.push(this.users[userKey])
+
+    for(let i = 0; i <= 1; i ++){
+      if(contacts[i] === this.users[i]){
+        users.push(this.users)
+      }
+    }
+    return users;
+  }
 
   getCurrentUser() {
     return this.currentUser;

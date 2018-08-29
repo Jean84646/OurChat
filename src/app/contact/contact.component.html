@@ -13,10 +13,9 @@
       </div>
 
     </div>
+
+    <li *ngFor="let contact of contacts"><a class="nav-link active">{{contact}}</a></li>
     <li class="nav-item" *ngFor="let user of users | contact : searchText">
-      <a class="nav-link active" *ngFor="let contact of user.contacts">{{contact}}</a>
-    </li>
-    <!-- <li *ngFor="let contact of contscts | searchedContacts"> -->
 
   </ul>
 </div>
