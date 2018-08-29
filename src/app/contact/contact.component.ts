@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { UserService } from '../user.service';
+import { UserService } from '../services/user.service';
 import { ContactPipe } from '../contact.pipe';
 import { User } from '../models/user';
 

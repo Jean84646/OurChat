@@ -1,47 +1,36 @@
 {
-  "blogs" : [
-    {
-        "posts" : [
-          {
-            "picture" : "",
-            "description" : "I am a thing",
-            "time" : ""
-          },
-          {
-            "picture" : "",
-            "description" : "I am a thing as well!",
-            "time" : ""
-          }
-        ]
-    }
-  ],
-  "users" : [
-    {
-      "blogKey" : "",
-      "chatKeys" : [""],
-      "contacts" : ["admin", "person1"],
-      "password" : "test",
-      "username" : "person2"
-    },
-    {
-      "blogKey" : "",
-      "chatKeys" : [""],
-      "contacts" : ["admin", "person2"],
-      "password" : "test",
-      "username" : "person1"
-    },
-    {
-      "blogKey" : "",
-      "chatKeys" : [""],
-      "contacts" : ["person1", "person2"],
-      "password" : "test",
-      "username" : "admin"
-    }
-  ],
-  "chats" : [
-    {
-      "users" : [""],
-      "messages" : [""]
-    }
-  ]
+  "blogs" : [ {
+    "posts" : [ {
+      "description" : "I am a thing",
+      "picture" : "",
+      "time" : ""
+    }, {
+      "description" : "I am a thing as well!",
+      "picture" : "",
+      "time" : ""
+    } ]
+  } ],
+  "chats" : [ {
+    "messages" : [ "" ],
+    "users" : [ "" ]
+  } ],
+  "users" : [ {
+    "blogKey" : "person2Key",
+    "chatKeys" : [ "0" ],
+    "contacts" : [ "2", "1" ],
+    "password" : "test",
+    "username" : "person2"
+  }, {
+    "blogKey" : "person1Key",
+    "chatKeys" : [ "0" ],
+    "contacts" : [ "2", "0" ],
+    "password" : "test",
+    "username" : "person1"
+  }, {
+    "blogKey" : "0",
+    "chatKeys" : [ "0" ],
+    "contacts" : [ "1", "0" ],
+    "password" : "test",
+    "username" : "admin"
+  } ]
 }

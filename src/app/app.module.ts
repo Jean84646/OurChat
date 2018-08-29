@@ -13,8 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 import { ContactPipe } from './contact.pipe';
+import { RegisterComponent } from './register/register.component';
 
 
 export const firebaseConfig = {
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     BlogComponent,
     SignUpComponent,
     ContactComponent,
-    ContactPipe
+    ContactPipe,
+    RegisterComponent
     // ContactPipe
   ],
   imports: [
