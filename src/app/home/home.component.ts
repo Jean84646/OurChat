@@ -38,7 +38,9 @@ export class HomeComponent implements OnInit {
     this.chat = this.chatService.getChatByKey(this.chatKey);
     this.user = this.userService.getCurrentUser();
     this.chat.subscribe(content => {
+      console.log("MESSAGES ARRAY NEXT");
       console.log(content.messages);
+      console.log("INDIVIDUAL MESSAGES LOOP NEXT");
       for (let key in content.message) {
         console.log(key + content.message[key]);
         // this.messages.push({key: key, value: value[key]})

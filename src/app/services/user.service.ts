@@ -37,7 +37,7 @@ export class UserService {
   // }
 
   getCurrentUser() {
-    return this.currentUser;
+    return this.database.object('users/' + this.currentUserKey);
   }
 
   addUser(username: string,password: string)
