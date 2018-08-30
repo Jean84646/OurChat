@@ -106,6 +106,11 @@
           "description" : "test lily",
           "picture" : "https://www.longfield-gardens.com/_ccLib/image/plants/DETA-487.jpg",
           "time" : "Thu Aug 30 2018 09:24:32 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBXQrD-ug6mfNGvgxc" : {
+          "description" : "asd",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:32:41 GMT-0700 (Pacific Daylight Time)"
         }
       }
     },
@@ -127,6 +132,36 @@
           "description" : "test",
           "picture" : "",
           "time" : "Thu Aug 30 2018 10:25:33 GMT-0700 (PDT)"
+        },
+        "-LLBYx_BaWiAJF_p7Znl" : {
+          "description" : "Test!!!",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:39:22 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBZdQvbiy3e8cARaiu" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:42:21 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBZmATKjP6PQpmc_U4" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:42:57 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBZzn1e3LDZlxkY0Ka" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:43:53 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLB_VWhuzYMTL49xDL3" : {
+          "description" : "Dim Sum: Asian brunch, universally eaten and enjoyed.",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:46:07 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLB_n2bM653tiRzTVYX" : {
+          "description" : "Why OurChat, why not! We're cutting edge, no fake news, and our advance filter system will keep dumb stuff off of your feed.",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:47:23 GMT-0700 (Pacific Daylight Time)"
         }
       }
     },
@@ -141,6 +176,11 @@
           "description" : "Why I hate Hisato...\n1. His last name is made up.\n2. If purell had a spokesperson, he would be it.\n3. Yet he smells.",
           "picture" : "",
           "time" : "Thu Aug 30 2018 09:56:33 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBXaZMAdd8_iX8m-Ih" : {
+          "description" : "austin txas",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:33:25 GMT-0700 (Pacific Daylight Time)"
         }
       }
     },
@@ -180,11 +220,28 @@
       } ]
     },
     "-LLAqSk9f1OfQB2EoyjK" : {
-      "posts" : [ {
-        "description" : "test description",
-        "picture" : "",
-        "time" : "Thu Aug 30 2018 10:20:35 GMT-0700 (Pacific Daylight Time)"
-      } ]
+      "posts" : {
+        "0" : {
+          "description" : "test description",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 10:20:35 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBT3afFYb0tg87NIjv" : {
+          "description" : "test admin blog",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:13:38 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBb9kczTUk3ePBwx4y" : {
+          "description" : "Steven is awesome for making the blogs work!",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:53:22 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLBbgno3_BfFMgD0p2v" : {
+          "description" : "Steven is awesome why doesnt picutre work below !?!?!?",
+          "picture" : "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7948348.jpg",
+          "time" : "Thu Aug 30 2018 13:55:42 GMT-0700 (Pacific Daylight Time)"
+        }
+      }
     },
     "-LLAqdKH5dbFQtTTI2Ur" : {
       "posts" : [ {
@@ -199,6 +256,15 @@
         "picture" : "",
         "time" : "Thu Aug 30 2018 10:21:43 GMT-0700 (Pacific Daylight Time)"
       } ]
+    },
+    "undefined" : {
+      "posts" : {
+        "-LLBZB5HIsYrnPaIdh-_" : {
+          "description" : "Blog Test",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 13:40:21 GMT-0700 (Pacific Daylight Time)"
+        }
+      }
     }
   },
   "chats" : [ {
@@ -274,6 +340,26 @@
       "-LLAriQH6hLvhS6SYhg_" : {
         "message" : "hey fung\n\n",
         "user" : "-LLAqiMe17X0Mh8oY45h"
+      },
+      "-LLBA5zEiiNGQHzP-Tmc" : {
+        "message" : "Yo what do you think of our new Epicodus people?\n",
+        "user" : "-LLAXU_8UehxKGfa2DTi"
+      },
+      "-LLBA8HrM0GnBc63thN-" : {
+        "message" : "We Da BEST!!!",
+        "user" : "-LLAdvEXCq9vfB8LnQHx"
+      },
+      "-LLBAFoPtc0ICgBdOgjw" : {
+        "message" : "New Mindy and Pananda?",
+        "user" : "-LLAXU_8UehxKGfa2DTi"
+      },
+      "-LLBBQnjKwKLboRXBVZp" : {
+        "message" : "Lan, I am done bro!",
+        "user" : "-LLAXU_8UehxKGfa2DTi"
+      },
+      "-LLBbi3zlBlObMzRyN1G" : {
+        "message" : "Hello World!",
+        "user" : "-LLAXU_8UehxKGfa2DTi"
       }
     },
     "users" : [ "" ]
@@ -282,7 +368,7 @@
     "2" : {
       "blogKey" : "0",
       "chatKeys" : [ "0" ],
-      "contacts" : [ "1", "2", "-LL60kTEumErEE-mG9uD" ],
+      "contacts" : [ "-LLAb63Xfm8JVdzyaOjY", "-LLAXU_8UehxKGfa2DTi", "-LL60kTEumErEE-mG9uD" ],
       "password" : "test",
       "username" : "ourchat_bot"
     },

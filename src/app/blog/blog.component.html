@@ -4,7 +4,7 @@
       <div class="contact-component">
         <ul class="nav flex-column" >
           <div class="info">
-            <h2>Austin</h2>
+            <h2>{{this.currentUser.username}}</h2>
             <img src="../assets/img/austin.jpg"/>
           </div>
           <div class="">
@@ -36,7 +36,7 @@
       <div class="card center-text">
         <div class="card-body">
           <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
-          <button class="btn btn-submit" (click)="addPost(postText)"> Post</button>
+          <button class="btn btn-submit" (click)="addPost(postText,postUrl)"> Post</button>
           <input type="text" [(ngModel)]="postUrl" placeholder="  Add image url">
         </div>
         <div class="card-footer">
