@@ -57,7 +57,7 @@ export class BlogComponent implements OnInit
       tempPosts.sort(function(a,b){
         return Date.parse(b.time) - Date.parse(a.time);
       });
-      console.log(tempPosts);
+      //console.log(tempPosts);
 
     },400);
     this.posts = tempPosts;

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers().subscribe(content => {
       this.users = content;
-      console.log(this.users);
+      //console.log(this.users);
       this.userNamePasswordPair = new Map();
       this.userKeyPair = new Map();
       content.forEach(user => {

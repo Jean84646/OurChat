@@ -15,14 +15,14 @@ export class BlogService {
   getBlogs(){
     let blogList = []
     this.blogs.subscribe(blogs => {
-      console.log(blogs);
+      //console.log(blogs);
       for(let i = 0; i < blogs.length; i++)
       {
         blogList.push(blogs[i]);
       }
       blogList = blogs;
     });
-    console.log(blogList);
+    //console.log(blogList);
     return blogList;
   }
 
