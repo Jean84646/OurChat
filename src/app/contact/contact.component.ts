@@ -19,21 +19,7 @@ export class ContactComponent implements OnInit
   constructor(private userService: UserService, private router: Router) { }
   ngOnInit()
   {
-    let tempContacts = [];
-    this.user = this.userService.getCurrentUser();
-    this.userService.getUsers().subscribe(userList =>
-      {
-      this.user.contacts.forEach(function(contactKey)
-      {
-        userList.forEach(function(user){
-          if(user.$key === contactKey)
-          {
-            tempContacts.push(user.username);
-          }
-        });
-      });
-    });
-    this.contacts = tempContacts;
+    this.contacts = this.userService.getContacts();
   }
   logOut() {
     this.userService.isLoggedIn = false;
