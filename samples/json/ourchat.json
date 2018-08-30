@@ -1,42 +1,355 @@
 {
-  "blogs" : [ {
-    "posts" : [ {
-      "description" : "I am a thing",
-      "picture" : "",
-      "time" : ""
-    }, {
-      "description" : "I am a thing as well!",
-      "picture" : "",
-      "time" : ""
-    } ]
-  } ],
+  "blogs" : {
+    "0" : {
+      "posts" : {
+        "-LL6dckoncPoDvuO-1PK" : {
+          "description" : "hi",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 14:46:03 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL6dd8Y4YzMXoYWDqpB" : {
+          "description" : "hi",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 14:46:05 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL6eAuF_gffbNlsAJRO" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 14:48:27 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL6fM6TwjYsw95e5Cs-" : {
+          "description" : "Jean's not a thing.",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 14:53:35 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL6fbBEf07XNR-kMyHw" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 14:54:41 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL6lWtrmMxDSteoOZys" : {
+          "description" : "testing",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 15:20:32 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL74dTyHdbiGHZy7ARC" : {
+          "description" : "efwf",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:48:26 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL74er5nIFx7KHU1pmK" : {
+          "description" : "safdgragrzdgvfxzgazgrdtzgbt",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:48:32 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL758DAnBThvhukyEid" : {
+          "description" : "dsada",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:50:36 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL759enwFIqauJGh-wz" : {
+          "description" : "asdadasdas",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:50:42 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL75NwIwDZ80hkHHRyB" : {
+          "description" : "qwrwtearttteqat5",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:51:41 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL75kWHWzSsqyqxTWfM" : {
+          "description" : "TEST TEST",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:53:17 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL75kZHTMLA08cQk1Nk" : {
+          "description" : "TEST TEST",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:53:17 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL75vmDYwwYYQYb2b54" : {
+          "description" : "JOHN",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 16:54:03 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77mFhqSp6rZmvhXpu" : {
+          "description" : "test 1 2 3 ",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:02:09 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77o4Sw06j51RqKS-t" : {
+          "description" : "1234566666",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:02:16 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77yrgSn3hQVbq_gAv" : {
+          "description" : "1234566666",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:03:00 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77yuw0Mi_nRyRdncr" : {
+          "description" : "1234566666",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:03:00 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77yxRpJrRJ23BdLfw" : {
+          "description" : "1234566666",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:03:01 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LL77yzpJ_g7pPIHhhNP" : {
+          "description" : "1234566666",
+          "picture" : "",
+          "time" : "Wed Aug 29 2018 17:03:01 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLAdceywlpdNkbMSU0Z" : {
+          "description" : "test lily",
+          "picture" : "https://www.longfield-gardens.com/_ccLib/image/plants/DETA-487.jpg",
+          "time" : "Thu Aug 30 2018 09:24:32 GMT-0700 (Pacific Daylight Time)"
+        }
+      }
+    },
+    "-LL60kTB-x9K_zUh1EwK" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Wed Aug 29 2018 11:51:49 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAXU_5vUJ1yee2IbvE" : {
+      "posts" : {
+        "0" : {
+          "description" : "test description",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 08:53:19 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLAraRi63tjMb6JPGj3" : {
+          "description" : "test",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 10:25:33 GMT-0700 (PDT)"
+        }
+      }
+    },
+    "-LLAb63Xfm8JVdzyaOjX" : {
+      "posts" : {
+        "0" : {
+          "description" : "test description",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 09:13:30 GMT-0700 (Pacific Daylight Time)"
+        },
+        "-LLAkxc1eRY3KN2JBjhN" : {
+          "description" : "Why I hate Hisato...\n1. His last name is made up.\n2. If purell had a spokesperson, he would be it.\n3. Yet he smells.",
+          "picture" : "",
+          "time" : "Thu Aug 30 2018 09:56:33 GMT-0700 (Pacific Daylight Time)"
+        }
+      }
+    },
+    "-LLAdvEVr9b3rqTsd_0W" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 09:25:48 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAncHSsepVcHacMo9I" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:08:12 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLApScAWfb2s0P7cTZd" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:16:12 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAq3LHzjWREmlgGWJ7" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:18:51 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAqGCASqtOoyI2vg3L" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:19:43 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAqSk9f1OfQB2EoyjK" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:20:35 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAqdKH5dbFQtTTI2Ur" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:21:22 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    },
+    "-LLAqiMdAHw2UYhpxLFy" : {
+      "posts" : [ {
+        "description" : "test description",
+        "picture" : "",
+        "time" : "Thu Aug 30 2018 10:21:43 GMT-0700 (Pacific Daylight Time)"
+      } ]
+    }
+  },
   "chats" : [ {
-    "messages" : [ {
-      "user" : "2",
-      "message" : "Test message from admin"
-    }, {
-      "user" : "1",
-      "message" : "Second test message from person1"
-    } ],
-    "users" : [ "1", "2" ]
+    "messages" : {
+      "0" : {
+        "message" : "test from admin",
+        "user" : "2"
+      },
+      "-LLAUg4P74PxeeCA0iq3" : {
+        "message" : "test from person1",
+        "user" : "1"
+      },
+      "-LLAW96rRCSK6LcGcfSX" : {
+        "message" : "hey do you see this?",
+        "user" : "1"
+      },
+      "-LLAWLgnfuKd12ulpGB0" : {
+        "message" : "yes",
+        "user" : "2"
+      },
+      "-LLAauFHOz1DODQ2wprC" : {
+        "message" : "yes",
+        "user" : "2"
+      },
+      "-LLAayfXR0AdLFZyivuK" : {
+        "message" : "HELLO",
+        "user" : "2"
+      },
+      "-LLAb1zdsUbmQzXtqdRA" : {
+        "message" : "YO BZRO\n",
+        "user" : "1"
+      },
+      "-LLAbEjN2odWXurbPJKU" : {
+        "message" : "CAse sensitive ",
+        "user" : "-LLAb63Xfm8JVdzyaOjY"
+      },
+      "-LLAdzepN4qnnp_tJs9N" : {
+        "message" : "Hey wassup austin",
+        "user" : "-LLAdvEXCq9vfB8LnQHx"
+      },
+      "-LLAe3BpsuBOcN8sObYc" : {
+        "message" : "Hisato sucks, am I right?",
+        "user" : "-LLAb63Xfm8JVdzyaOjY"
+      },
+      "-LLAe7WxfV--46ZbI7MD" : {
+        "message" : "you're right! wait he hook us up for drink though....",
+        "user" : "-LLAdvEXCq9vfB8LnQHx"
+      },
+      "-LLAidQLcID2-izxc7XF" : {
+        "message" : "huh?",
+        "user" : "-LLAb63Xfm8JVdzyaOjY"
+      },
+      "-LLAjJXK03NRXEc-b9Av" : {
+        "message" : "Hey its BLUE!",
+        "user" : "-LLAb63Xfm8JVdzyaOjY"
+      },
+      "-LLAjQUARo0wcRrroFEU" : {
+        "message" : "Test\ntest\ntes\n\n\n\n\n\n\n\n\n\n\n\n\nl",
+        "user" : "-LLAb63Xfm8JVdzyaOjY"
+      },
+      "-LLAnk83OpJRwcD8YzKI" : {
+        "message" : "herrow\n",
+        "user" : "-LLAncHTTozU5OI-Z8sA"
+      },
+      "-LLAo8mQ0aX1oi23Q2mc" : {
+        "message" : "https://www.learnhowtoprogram.com/javascript/angular-extended/firebase-introduction-and-setup",
+        "user" : "1"
+      },
+      "-LLArT4d8Oww6YpRJF6O" : {
+        "message" : "Hey",
+        "user" : "-LLAXU_8UehxKGfa2DTi"
+      },
+      "-LLAriQH6hLvhS6SYhg_" : {
+        "message" : "hey fung\n\n",
+        "user" : "-LLAqiMe17X0Mh8oY45h"
+      }
+    },
+    "users" : [ "" ]
   } ],
-  "users" : [ {
-    "blogKey" : "person2Key",
-    "chatKeys" : [ "0" ],
-    "contacts" : [ "2", "1" ],
-    "password" : "test",
-    "username" : "person2"
-  }, {
-    "blogKey" : "person1Key",
-    "chatKeys" : [ "0" ],
-    "contacts" : [ "2", "0" ],
-    "password" : "test",
-    "username" : "person1"
-  }, {
-    "blogKey" : "0",
-    "chatKeys" : [ "0" ],
-    "contacts" : [ "1", "0" ],
-    "password" : "test",
-    "username" : "admin"
-  } ]
+  "users" : {
+    "2" : {
+      "blogKey" : "0",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "1", "2", "-LL60kTEumErEE-mG9uD" ],
+      "password" : "test",
+      "username" : "ourchat_bot"
+    },
+    "-LL60kTEumErEE-mG9uD" : {
+      "blogKey" : "-LL60kTB-x9K_zUh1EwK",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "2" ],
+      "password" : "notGoodPw",
+      "username" : "Thats_not_my_name"
+    },
+    "-LLAXU_8UehxKGfa2DTi" : {
+      "blogKey" : "-LLAXU_5vUJ1yee2IbvE",
+      "contacts" : [ "-LLAqSk9f1OfQB2EoyjL" ],
+      "password" : "chicken",
+      "username" : "FungChaoPapi"
+    },
+    "-LLAb63Xfm8JVdzyaOjY" : {
+      "blogKey" : "-LLAb63Xfm8JVdzyaOjX",
+      "contacts" : [ "-LLAqSk9f1OfQB2EoyjL" ],
+      "password" : "yo",
+      "username" : "Austin"
+    },
+    "-LLAdvEXCq9vfB8LnQHx" : {
+      "blogKey" : "-LLAdvEVr9b3rqTsd_0W",
+      "contacts" : [ "-LLAqSk9f1OfQB2EoyjL" ],
+      "password" : "test",
+      "username" : "Lan"
+    },
+    "-LLAncHTTozU5OI-Z8sA" : {
+      "blogKey" : "-LLAncHSsepVcHacMo9I",
+      "contacts" : [ "-LLAqSk9f1OfQB2EoyjL" ],
+      "password" : "password",
+      "username" : "hisato"
+    },
+    "-LLAq3LJqGLPsmKLwoSr" : {
+      "blogKey" : "-LLAq3LHzjWREmlgGWJ7",
+      "contacts" : [ "-LLAqSk9f1OfQB2EoyjL" ],
+      "password" : "a",
+      "username" : "frist"
+    },
+    "-LLAqGCCcQ3vr6whdUPt" : {
+      "blogKey" : "-LLAqGCASqtOoyI2vg3L",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "0" ],
+      "password" : "b",
+      "username" : "frist"
+    },
+    "-LLAqSk9f1OfQB2EoyjL" : {
+      "blogKey" : "-LLAqSk9f1OfQB2EoyjK",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "2" ],
+      "password" : "test",
+      "username" : "admin"
+    },
+    "-LLAqdKH5dbFQtTTI2Us" : {
+      "blogKey" : "-LLAqdKH5dbFQtTTI2Ur",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "0" ],
+      "password" : "test",
+      "username" : "person2"
+    },
+    "-LLAqiMe17X0Mh8oY45h" : {
+      "blogKey" : "-LLAqiMdAHw2UYhpxLFy",
+      "chatKeys" : [ "0" ],
+      "contacts" : [ "0" ],
+      "password" : "test",
+      "username" : "person1"
+    }
+  }
 }

@@ -1,6 +1,7 @@
 a {
   color: #4A90E2;
   font-size: 85%;
+  text-decoration: none;
 }
 
 button {
@@ -14,7 +15,7 @@ button {
 }
 
 button:hover {
-  color: #4A90E2;
+  cursor: pointer;
 }
 
 textArea {
@@ -49,6 +50,10 @@ textArea:focus {
   border-radius: 1%;
 }
 
+.contact-component {
+  max-width: 100%;
+}
+
 .form-control {
   background:linear-gradient(to right, #232526, #414345);
   color: #fff;
@@ -66,6 +71,10 @@ textArea:focus {
 
 .info h2{
   margin-top: 20px;
+}
+
+.input-group {
+  color: red;
 }
 
 .nav{
@@ -135,7 +144,7 @@ textArea:focus {
 }
 
 #send-btn:hover {
-  color: #4A90E2;
+  cursor: pointer;
 }
 
 .logout-btn {

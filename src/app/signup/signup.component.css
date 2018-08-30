@@ -1,0 +1,38 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  border-style: none;
+}
+
+button {
+  color: yellow;
+}
+
+.card-title {
+  text-align: center;
+}
+
+b {
+  padding: 1px;
+  font-size: 25px;
+  text-align: center;
+  color: #4A90E2
+}
+.card-body {
+  border-style: none;
+  text-align: center;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  border-style: none;
+}
+
+button {
+  background:linear-gradient(to right, #232526, #414345);
+  border-style: none;
+  border-radius: 4px;
+  color: #FFF;
+  cursor: pointer;
+}
