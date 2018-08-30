@@ -4,9 +4,9 @@
   </div>
   <div class="card-body">
     <form class="" action="index.html" method="post">
-      <label for="username"></label>
-      <input type="text" name="username" [(ngModel)]="un">
-      <label for="password"></label>
+      <label for="username">Create an username:</label>
+      <input type="text" name="username" [(ngModel)]="un" placeholder="case-sensitive">
+      <label for="password">Create a password:</label>
       <input type="text" name="password" [(ngModel)]="pw">
       <button type="submit" name="button" (click)="addUser(un,pw)">Sign Up!</button>
     </form>

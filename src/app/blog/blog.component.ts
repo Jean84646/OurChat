@@ -19,14 +19,15 @@ export class BlogComponent implements OnInit
   currentUser: User;
 
 
-  constructor(private blogService: BlogService, private userService: UserService, private router: Router) { }
 
+  constructor(private blogService: BlogService, private userService: UserService, private router: Router) { }
 
   ngOnInit()
   {
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
     this.posts = this.blogService.getBlogByKey(this.blogKey);
+    this.blogService.getBlogs();
   }
 
   addPost(description: string, img: string)

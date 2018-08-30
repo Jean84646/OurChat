@@ -48,7 +48,9 @@ export class UserService {
     var newBlog = new Blog();
     newBlog.addPost('test description');
     let blogKey = blogs.push(newBlog).key;
-    let newUser = new User(username,password,[],[],blogKey);
+    let chatKeys = ['0'];
+    let contacts = ['0'];
+    let newUser = new User(username,password,chatKeys,contacts,blogKey);
     this.users.push(newUser);
   }
 

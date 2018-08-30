@@ -12,7 +12,17 @@ export class BlogService {
   }
 
   getBlogs(){
-    return this.blogs;
+    let blogList = []
+    this.blogs.subscribe(blogs => {
+      console.log(blogs);
+      for(let i = 0; i < blogs.length; i++)
+      {
+        blogList.push(blogs[i]);
+      }
+      blogList = blogs;
+    });
+    console.log(blogList);
+    return blogList;
   }
 
   //depreceated addBlogs via user.services on new user creation
@@ -30,10 +40,9 @@ export class BlogService {
       for(var post in blogToDisplay)
       {
         let tempPost = blogToDisplay[post];
-        newPosts.push(tempPost);
+        newPosts.unshift(tempPost);
       }
     });
-    newPosts.reverse();
     return newPosts;
   }
 
