@@ -14,7 +14,6 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class BlogComponent implements OnInit
 {
   blogKey: string;
-  blogToDisplay: Blog;
   posts: Post[];
   currentUser: User;
 
@@ -25,22 +24,13 @@ export class BlogComponent implements OnInit
     let newPosts = [];
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
-    let foundBlog = this.blogService.getBlogByKey(this.blogKey);
-    foundBlog.subscribe(returnedBlog => {
-      console.log(returnedBlog[0]);
-     this.blogToDisplay = returnedBlog[0];
-     for(var post in this.blogToDisplay)
-     {
-       let tempPost = this.blogToDisplay[post];
-       newPosts.push(tempPost);
-     }
-     this.posts = newPosts.reverse();
-   });
+    this.posts = this.blogService.getBlogByKey(this.blogKey);
   }
 
   addPost(description: string)
   {
     this.blogService.addPostToBlog(this.blogKey,description);
+    this.posts = this.blogService.getBlogByKey(this.blogKey);
   }
 
   timeSince(postTime: string)

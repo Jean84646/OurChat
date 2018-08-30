@@ -22,7 +22,18 @@ export class BlogService {
 
   getBlogByKey(blogKey: string)
   {
-    return this.database.list('/blogs/' + blogKey);
+    let newPosts = [];
+    let blogToDisplay = new Blog();
+    let foundBlog = this.database.list('/blogs/' + blogKey);
+    foundBlog.subscribe(returnedBlog => {
+      blogToDisplay = returnedBlog[0];
+      for(var post in blogToDisplay)
+      {
+        let tempPost = blogToDisplay[post];
+        newPosts.push(tempPost);
+      }
+    });
+    return newPosts.reverse();
   }
 
   addPostToBlog(blogKey: string, description: string, picture: string = "")
