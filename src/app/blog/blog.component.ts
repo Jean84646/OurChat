@@ -24,13 +24,16 @@ export class BlogComponent implements OnInit
     let newPosts = [];
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
+    let tempBlog = this.blogService.getBlogByKey(this.blogKey).reverse();
+    console.log(tempBlog);
+    this.posts = tempBlog;
   }
 
   addPost(description: string)
   {
     this.blogService.addPostToBlog(this.blogKey,description);
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
+    let tempBlog = this.blogService.getBlogByKey(this.blogKey).reverse();
+    this.posts = tempBlog;
   }
 
   timeSince(postTime: string)

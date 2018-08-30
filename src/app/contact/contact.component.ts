@@ -21,11 +21,7 @@ export class ContactComponent implements OnInit
     let tempContacts = [];
     this.user = this.userService.getCurrentUser();
     this.userService.getUsers().subscribe(userList =>
-      {
-      this.users = userList;
-      this.user = this.userService.getCurrentUser();
-
-      this.contacts = this.user.contacts;
+      {      
       this.user.contacts.forEach(function(contactKey)
       {
         userList.forEach(function(user){
