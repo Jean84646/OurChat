@@ -137,3 +137,9 @@ textArea:focus {
 #send-btn:hover {
   color: #4A90E2;
 }
+
+.logout-btn {
+  background-color: yellow;
+  width: 80px;
+  margin-bottom: 25px;
+}

@@ -3,6 +3,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../services/user.service';
 import { ContactPipe } from '../contact.pipe';
 import { User } from '../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -15,13 +16,13 @@ export class ContactComponent implements OnInit
   user: User;
   contacts: string[];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
   ngOnInit()
   {
     let tempContacts = [];
     this.user = this.userService.getCurrentUser();
     this.userService.getUsers().subscribe(userList =>
-      {      
+      {
       this.user.contacts.forEach(function(contactKey)
       {
         userList.forEach(function(user){
@@ -33,5 +34,10 @@ export class ContactComponent implements OnInit
       });
     });
     this.contacts = tempContacts;
+  }
+  logOut() {
+    this.userService.isLoggedIn = false;
+    this.userService.currentUser = null;
+    this.router.navigate(['']);
   }
 }
