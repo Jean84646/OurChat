@@ -4,6 +4,7 @@ import { BlogService } from '../services/blog.service';
 import { UserService } from '../services/user.service';
 import { User } from '../models/user';
 import { FirebaseObjectObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -17,8 +18,9 @@ export class BlogComponent implements OnInit
   posts: Post[];
   currentUser: User;
 
-  constructor(private blogService: BlogService, private userService: UserService) {
-  }
+
+
+  constructor(private blogService: BlogService, private userService: UserService, private router: Router) { }
 
   ngOnInit()
   {
@@ -70,6 +72,12 @@ export class BlogComponent implements OnInit
       return timeInHours + " " + "minute";
     }
     return "less than a minute";
+  }
+
+  logOut() {
+    this.userService.isLoggedIn = false;
+    this.userService.currentUser = null;
+    this.router.navigate(['']);
   }
 
 }
