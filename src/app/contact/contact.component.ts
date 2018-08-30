@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit
   users;
   user: User;
   contacts: string[];
+  show: boolean = false;
 
   constructor(private userService: UserService, private router: Router) { }
   ngOnInit()
@@ -39,5 +40,8 @@ export class ContactComponent implements OnInit
     this.userService.isLoggedIn = false;
     this.userService.currentUser = null;
     this.router.navigate(['']);
+  }
+  showChatButton(){
+    this.show = !this.show;
   }
 }
