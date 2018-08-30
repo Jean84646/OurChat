@@ -18,15 +18,15 @@
               <a routerLink="/contacts">| Contacts</a>
               <a routerLink="/blog">| Blogs |</a>
           </div>
-          <li class="nav-item" *ngFor="let user of users | contact : searchText">
+          <!-- <li class="nav-item" *ngFor="let user of users | contact : searchText">
             <a class="nav-link active" *ngFor="let contact of user.contacts">{{contact}}</a>
-          </li>
-          <!-- <li *ngFor="let contact of contscts | searchedContacts"> -->
+          </li> -->
+          <li>List of conversations here</li>
         </ul>
       </div>
     </div>
     <div id="main-content" class="col-md-9 card">
-      <div id="chat-list">
+      <div id="chat-list" #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <div [class]="messageClass(message.user)" *ngFor="let message of messages | keys">
           <h2>{{ getName(message.user) }}: {{ message.message }}</h2>
         </div>
