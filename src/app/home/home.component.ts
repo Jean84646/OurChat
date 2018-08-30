@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
         this.userKeyPair.set(user.username, user.$key);
       })
     });
-
+    this.user = this.userService.getCurrentUser();
     this.chat = this.chatService.getChatByKey(this.chatKey);
     this.user = this.userService.getCurrentUser();
     this.chat.subscribe(content => {
