@@ -38,13 +38,11 @@ export class HomeComponent implements OnInit {
     this.chat = this.chatService.getChatByKey(this.chatKey);
     this.user = this.userService.getCurrentUser();
     this.chat.subscribe(content => {
-      console.log("MESSAGES ARRAY NEXT");
       console.log(content.messages);
-      console.log("INDIVIDUAL MESSAGES LOOP NEXT");
-      for (let key in content.message) {
-        console.log(key + content.message[key]);
-        // this.messages.push({key: key, value: value[key]})
-      }
+      // for (let key in content.messages) {
+      //   console.log(key + content.messages[key]);
+      //   this.messages.push({key: key, value: value[key]})
+      // }
       this.messages = content.messages;
       // console.log(this.messages);
     });
@@ -52,6 +50,14 @@ export class HomeComponent implements OnInit {
 
   getName(userKey: string) {
     return this.userNamePair.get(userKey);
+  }
+
+  messageClass(userKey: string){
+    if(this.userService.currentUserKey === userKey) {
+      return "my-message";
+    } else {
+      return "other-message";
+    }
   }
 
   sendText(message: string) {
