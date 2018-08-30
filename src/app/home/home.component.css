@@ -1,7 +1,15 @@
 .my-message {
-  color: blue;
+  color: #FFF;
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  border-radius: 7px;
+  margin: 5px;
+  font-size: 85%;
 }
 
 .other-message {
-  color: red;
+  color:  #8e8e8e;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+  border-radius: 7px;
+  margin: 5px;
+  font-size: 85%;
 }

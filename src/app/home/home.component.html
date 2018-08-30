@@ -25,7 +25,7 @@
     <div id="main-content" class="col-md-9 card">
       <div id="chat-list">
         <div [class]="messageClass(message.user)" *ngFor="let message of messages | keys">
-          <h2>{{ getName(message.user) }}: {{ message.message }}</h2>
+          <h3>{{ getName(message.user) }}: {{ message.message }}</h3>
         </div>
       </div>
       <div id="chat-input">
