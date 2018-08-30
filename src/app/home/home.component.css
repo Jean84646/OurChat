@@ -4,7 +4,7 @@
   border-radius: 7px;
   padding: 3px;
   margin: 7px;
-  font-size: 65%;
+  font-size: 60%;
 }
 
 .other-message {
@@ -13,5 +13,9 @@
   border-radius: 7px;
   padding: 3px;
   margin: 7px;
-  font-size: 65%;
+  font-size: 50%;
+}
+
+h3 {
+  overflow-wrap: break-word;
 }

@@ -27,6 +27,8 @@ textArea {
   border-radius: 4px;
   border-color: #a8aeb7;
   background-color: rgba(255, 255, 255, 0.5);
+  color:#8e8e8e;
+  font-size: 20px;
 }
 
 textArea:focus {
@@ -77,6 +79,15 @@ textArea:focus {
   color: red;
 }
 
+.logout-btn {
+  background:linear-gradient(to right, #232526, #414345);
+  color:#8e8e8e;
+}
+
+.logout-btn:hover {
+  color: #3C67C2;
+}
+
 .nav{
   background:linear-gradient(to right, #232526, #414345);
   color: #FFF;
@@ -94,6 +105,7 @@ textArea:focus {
 
 .routers {
   text-align: center;
+  color: #4A90E2;
 }
 
 #chat-list {
