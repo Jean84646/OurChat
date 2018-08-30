@@ -42,7 +42,6 @@ input {
 
 #blog {
   border-style: none;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 4px;
   padding: 2.5%;
   font-size: 15px;
@@ -51,6 +50,11 @@ input {
 
 #blog-post {
   font-size: 20px;
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  color: #FFF;
+  border-radius: 4px;
+  padding: 3px;
+  margin: 3px;
 }
 
 .card-footer {
