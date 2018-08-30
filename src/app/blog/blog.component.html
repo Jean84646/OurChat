@@ -33,15 +33,20 @@
       <div class="card center-text">
         <div class="card-body">
           <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
+          <input type="text" [(ngModel)]="postUrl" placeholder="Add image url">
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-submit" (click)="addPost(postText)">Add Post</button>
+          <button type="submit" class="btn btn-submit" (click)="addPost(postText,postUrl)">Add Post</button>
         </div>
       </div>
       <div *ngFor="let post of posts">
         <div class="card">
           <div class="card-body">
             <p>{{post.description}}</p>
+            <div *ngIf="showImg(post.picture)">
+              <img src={{post.picture}} alt="blog picture" class="post-image">
+            </div>
+            <br>
             <footer>Posted {{timeSince(post.time)}} ago.</footer>
           </div>
         </div>
