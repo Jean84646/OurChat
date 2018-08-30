@@ -21,6 +21,7 @@ export class ContactComponent implements OnInit
   ngOnInit()
   {
     this.contacts = this.userService.getContacts();
+    console.log(this.contacts);
   }
   logOut() {
     this.userService.isLoggedIn = false;
