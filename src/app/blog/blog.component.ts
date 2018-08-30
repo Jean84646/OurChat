@@ -59,7 +59,7 @@ export class BlogComponent implements OnInit
       });
       console.log(tempPosts);
 
-    },600);
+    },400);
     this.posts = tempPosts;
   }
 
