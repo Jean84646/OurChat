@@ -38,29 +38,28 @@ export class BlogComponent implements OnInit
   {
     let tempPosts = [];
     let contactKeys = this.userService.getContactKeys();
-
-    console.log(contactKeys);
     let blogKeys = [];
     blogKeys.push(this.blogKey);
     contactKeys.forEach(key => {
       blogKeys.push(this.userService.getBlogKey(key));
     })
-    console.log(blogKeys);
     blogKeys.forEach(individualBlogKey => {
-      console.log(individualBlogKey);
       let blog = this.blogService.getBlogByKey(individualBlogKey);
       setTimeout(function(){
-        console.log(blog);
-        console.log(blog.length);
         for(let i = 0; i < blog.length;i++)
         {
-          console.log(blog[i]);
+          tempPosts.push(blog[i]);
         }
-      },200)
+      },200);//make proper async Promise later
     });
-    console.log(tempPosts);
-    tempPosts.sort();
-    console.log(tempPosts);
+
+    setTimeout(function(){
+      tempPosts.sort(function(a,b){
+        return Date.parse(b.time) - Date.parse(a.time);
+      });
+      console.log(tempPosts);
+
+    },600);
     this.posts = tempPosts;
   }
 

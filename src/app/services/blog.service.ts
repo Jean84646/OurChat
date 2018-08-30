@@ -41,7 +41,7 @@ export class BlogService {
       for(var post in blogToDisplay)
       {
         let tempPost = blogToDisplay[post];
-        newPosts.unshift(tempPost);
+        newPosts.push(tempPost);
       }
     });
     return newPosts;
