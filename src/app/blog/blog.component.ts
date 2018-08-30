@@ -18,9 +18,6 @@ export class BlogComponent implements OnInit
   currentUser: User;
 
   constructor(private blogService: BlogService, private userService: UserService) {
-    this.currentUser = this.userService.getCurrentUser();
-    this.blogKey = this.currentUser.blogKey;
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
   }
 
   ngOnInit()
@@ -28,6 +25,7 @@ export class BlogComponent implements OnInit
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
     this.posts = this.blogService.getBlogByKey(this.blogKey);
+    this.blogService.getBlogs();
   }
 
   addPost(description: string, img: string)
