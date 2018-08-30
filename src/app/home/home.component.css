@@ -15,3 +15,7 @@
   margin: 7px;
   font-size: 50%;
 }
+
+h3 {
+  overflow-wrap: break-word;
+}
