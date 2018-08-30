@@ -16,10 +16,9 @@
                 <a routerLink="/contacts">| Contacts</a>
                 <a routerLink="/blog">| Blogs</a>
             </div>
-            <li class="nav-item" *ngFor="let user of users | contact : searchText">
-              <a class="nav-link active" *ngFor="let contact of user.contacts">{{contact}}</a>
+            <li class="nav-item">
+              <a class="nav-link active" *ngFor="let contact of contacts | contact : searchText">{{contact}}</a>
             </li>
-            <!-- <li *ngFor="let contact of contscts | searchedContacts"> -->
           </ul>
         </div>
       </div>

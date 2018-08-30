@@ -8,6 +8,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class UserService {
   users: FirebaseListObservable<any[]>;
   currentUser: User;
+  currentUserKey: string;
   isLoggedIn: boolean = false;
 
   constructor(private database: AngularFireDatabase) {
@@ -17,8 +18,6 @@ export class UserService {
   getUsers() {
     return this.users;
   }
-
-  //to return an array of users that are contacts of the given user.
 
   getContacts(userKey: number){
     var contacts = [];
@@ -33,6 +32,9 @@ export class UserService {
     return users;
   }
 
+  // getUser(userKey: string){
+  //   return this.database.object('users/' + userKey);
+  // }
 
   getCurrentUser() {
     return this.currentUser;
@@ -46,6 +48,11 @@ export class UserService {
     let blogKey = blogs.push(newBlog).key;
     let newUser = new User(username,password,[],[],blogKey);
     this.users.push(newUser);
+  }
+
+  getUser(contactKey: string)
+  {
+    return this.users;
   }
 
 }
