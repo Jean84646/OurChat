@@ -89,6 +89,7 @@ textArea:focus {
 
 #chat-list {
   height: 600px;
+  overflow: scroll;
 }
 
 #chat-input {
