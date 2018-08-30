@@ -1,14 +1,16 @@
 .center-text {
   border-style: none;
   border-radius: 4px;
+  background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .card {
   border-style: none;
+  background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .card-body {
- background:linear-gradient(to top, #dfe9f3 0%, white 100%);
+ background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .col-md-9 {
@@ -16,8 +18,10 @@
 }
 
 p {
-  color: #3C67C2;
-  font-size: 25px;
+  background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #8e8e8e;
+  font-size: 35px;
+  font-weight: bold;
 }
 .chatroom .row {
   margin-left: 0px;
@@ -25,18 +29,32 @@ p {
 }
 
 textarea {
-  background:linear-gradient(to top, #dfe9f3 0%, white 100%);
-  border-color: #FFF;
-  color:#8e8e8e
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-color: #8e8e8e;
+  color: #8e8e8e;
+}
+
+input {
+  background:linear-gradient(to right, #ece9e6, #ffffff);
+  border-radius: 4px;
+  border-style: none;
 }
 
 #blog {
   border-style: none;
-  background:linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border-radius: 4px;
   padding: 2.5%;
   font-size: 15px;
   color: #8e8e8e;
+}
+
+#blog-post {
+  font-size: 20px;
+}
+
+.card-footer {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 button {
@@ -45,7 +63,9 @@ button {
 }
 
 .btn-submit {
-  background:linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  background:linear-gradient(to right, #ece9e6, #ffffff);
+  border-color: #FFF;
+  color:#8e8e8e;
 }
 
 footer {
