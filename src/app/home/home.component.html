@@ -27,8 +27,8 @@
     </div>
     <div id="main-content" class="col-md-9 card">
       <div id="chat-list">
-        <div class="" *ngFor="let message of messages">
-          <h2>{{ getName(message?.user) }}: {{ message?.message }}</h2>
+        <div class="" *ngFor="let message of messages | keys">
+          <h2>{{ getName(message.user) }}: {{ message.message }}</h2>
         </div>
         <!-- <ul>
           <li>this is the conversation part!</li>

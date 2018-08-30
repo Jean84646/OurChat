@@ -37,4 +37,5 @@ export class ContactComponent implements OnInit
       });
     });
     this.contacts = tempContacts;
+  }
 }

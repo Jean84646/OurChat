@@ -13,33 +13,49 @@ import { Chat, Message } from '../models/chat';
   providers: [ChatService]
 })
 export class HomeComponent implements OnInit {
-  users;
+  users: User[];
   chat;
   messages: Message[];
-  user;
+  user: User;
   chatKey: string = "0";
+  userNamePair;
+  userKeyPair;
+  currentUserKey: string;
 
   constructor(private userService: UserService, private chatService: ChatService, private router: Router) { }
 
   ngOnInit() {
-    // this.userService.getUsers().subscribe(dataLastEmittedFromObserver => {
-    //   this.users = dataLastEmittedFromObserver;
-    // });
-    this.users = this.userService.getUsers();
+    this.userService.getUsers().subscribe(content => {
+      this.users = content;
+      this.userNamePair = new Map();
+      this.userKeyPair = new Map();
+      content.forEach(user => {
+        this.userNamePair.set(user.$key, user.username);
+        this.userKeyPair.set(user.username, user.$key);
+      })
+    });
+
     this.chat = this.chatService.getChatByKey(this.chatKey);
     this.user = this.userService.getCurrentUser();
     this.chat.subscribe(content => {
+      console.log(content.messages);
+      for (let key in content.message) {
+        console.log(key + content.message[key]);
+        // this.messages.push({key: key, value: value[key]})
+      }
       this.messages = content.messages;
+      // console.log(this.messages);
     });
   }
 
   getName(userKey: string) {
-
+    return this.userNamePair.get(userKey);
   }
 
-  sentText(message: string) {
-    let newMessage: Message = new Message(message, this.user.$key);
-    console.log(newMessage);
+  sendText(message: string) {
+    this.currentUserKey = this.userKeyPair.get(this.user.username);
+    let newMessage: Message = new Message(message, this.currentUserKey);
+    this.chatService.addMessage(this.chatKey, newMessage);
   }
 
   logOut() {

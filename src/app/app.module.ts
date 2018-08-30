@@ -15,6 +15,7 @@ import { SignUpComponent } from './signup/signup.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserService } from './services/user.service';
 import { ContactPipe } from './contact.pipe';
+import { KeysPipe } from './keys.pipe';
 // import { RegisterComponent } from './register/register.component';
 
 
@@ -34,6 +35,7 @@ export const firebaseConfig = {
     SignUpComponent,
     ContactComponent,
     ContactPipe,
+    KeysPipe
     // RegisterComponent
     // ContactPipe
   ],
