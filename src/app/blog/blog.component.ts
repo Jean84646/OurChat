@@ -25,14 +25,42 @@ export class BlogComponent implements OnInit
   {
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
-    console.log(this.userService.getContactKeys());
+    this.refreshBlog();
   }
 
   addPost(description: string, img: string)
   {
     this.blogService.addPostToBlog(this.blogKey,description,img);
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
+    this.refreshBlog();
+  }
+
+  refreshBlog()
+  {
+    let tempPosts = [];
+    let contactKeys = this.userService.getContactKeys();
+    let blogKeys = [];
+    blogKeys.push(this.blogKey);
+    contactKeys.forEach(key => {
+      blogKeys.push(this.userService.getBlogKey(key));
+    })
+    blogKeys.forEach(individualBlogKey => {
+      let blog = this.blogService.getBlogByKey(individualBlogKey);
+      setTimeout(function(){
+        for(let i = 0; i < blog.length;i++)
+        {
+          tempPosts.push(blog[i]);
+        }
+      },200);//make proper async Promise later
+    });
+
+    setTimeout(function(){
+      tempPosts.sort(function(a,b){
+        return Date.parse(b.time) - Date.parse(a.time);
+      });
+      console.log(tempPosts);
+
+    },400);
+    this.posts = tempPosts;
   }
 
   showImg(imgUrl: string)

@@ -32,4 +32,10 @@
 
 .chat-btn {
   width: 25%;
+  color: lightblue;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
