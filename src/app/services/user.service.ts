@@ -65,6 +65,16 @@ export class UserService {
     return tempUser;
   }
 
+  getBlogKey(key: string)
+  {
+    let tempKey;
+    let blogKey = this.database.object('users/'+key);
+    blogKey.subscribe(key => {
+      tempKey = key.blogKey;
+    });
+    return tempKey;
+  }
+
   addUser(username: string,password: string)
   {
     let blogs = this.database.list('blogs');
