@@ -17,8 +17,7 @@ export class BlogComponent implements OnInit
   blogKey: string;
   posts: Post[];
   currentUser: User;
-
-
+  contactKeys: string[];
 
   constructor(private blogService: BlogService, private userService: UserService, private router: Router) { }
 
@@ -27,7 +26,7 @@ export class BlogComponent implements OnInit
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
     this.posts = this.blogService.getBlogByKey(this.blogKey);
-    this.blogService.getBlogs();
+    console.log(this.userService.getContactKeys());
   }
 
   addPost(description: string, img: string)

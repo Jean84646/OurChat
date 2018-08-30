@@ -5,6 +5,7 @@ import { Blog, Post } from '../models/blog';
 @Injectable()
 export class BlogService {
   blogs: FirebaseListObservable<Blog[]>;
+  userContacts: any[];
   lastInstertedBlogKey: string;
 
   constructor(private database: AngularFireDatabase) {
@@ -44,6 +45,25 @@ export class BlogService {
       }
     });
     return newPosts;
+  }
+
+  getBlogsByKeys(blogKeys: string[])
+  {
+    let newPosts = [];
+    let blogToDisplay = new Blog();
+    blogKeys.forEach(function(blogKey) {
+      let foundBlog = this.database.list('/blogs/' + blogKey);
+      foundBlog.subscribe(returnedBlog => {
+        blogToDisplay = returnedBlog[0];
+        for(var post in blogToDisplay)
+        {
+          let tempPost = blogToDisplay[post];
+          newPosts.unshift(tempPost);
+        }
+      });
+    });
+
+    return newPosts.sort();
   }
 
   addPostToBlog(blogKey: string, description: string, picture: string = "")
