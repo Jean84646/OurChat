@@ -25,14 +25,43 @@ export class BlogComponent implements OnInit
   {
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
-    console.log(this.userService.getContactKeys());
+    this.refreshBlog();
   }
 
   addPost(description: string, img: string)
   {
     this.blogService.addPostToBlog(this.blogKey,description,img);
-    this.posts = this.blogService.getBlogByKey(this.blogKey);
+    this.refreshBlog();
+  }
+
+  refreshBlog()
+  {
+    let tempPosts = [];
+    let contactKeys = this.userService.getContactKeys();
+
+    console.log(contactKeys);
+    let blogKeys = [];
+    blogKeys.push(this.blogKey);
+    contactKeys.forEach(key => {
+      blogKeys.push(this.userService.getBlogKey(key));
+    })
+    console.log(blogKeys);
+    blogKeys.forEach(individualBlogKey => {
+      console.log(individualBlogKey);
+      let blog = this.blogService.getBlogByKey(individualBlogKey);
+      setTimeout(function(){
+        console.log(blog);
+        console.log(blog.length);
+        for(let i = 0; i < blog.length;i++)
+        {
+          console.log(blog[i]);
+        }
+      },200)
+    });
+    console.log(tempPosts);
+    tempPosts.sort();
+    console.log(tempPosts);
+    this.posts = tempPosts;
   }
 
   showImg(imgUrl: string)
