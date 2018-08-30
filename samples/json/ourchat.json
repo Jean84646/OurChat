@@ -11,8 +11,14 @@
     } ]
   } ],
   "chats" : [ {
-    "messages" : [ "" ],
-    "users" : [ "" ]
+    "messages" : [ {
+      "user" : "2",
+      "message" : "Test message from admin"
+    }, {
+      "user" : "1",
+      "message" : "Second test message from person1"
+    } ],
+    "users" : [ "1", "2" ]
   } ],
   "users" : [ {
     "blogKey" : "person2Key",

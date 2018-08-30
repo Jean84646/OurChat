@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
    });
  }
   checkLogin(userName, userPass){
-    // console.log(this.users);
     for(let i = 0; i < this.users.length; i++) {
       if (this.users[i].username == userName) {
         if (this.users[i].password == userPass) {
