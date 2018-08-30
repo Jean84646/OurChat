@@ -4,6 +4,10 @@
   border-style: none;
 }
 
+button {
+  color: yellow;
+}
+
 .card-title {
   text-align: center;
 }

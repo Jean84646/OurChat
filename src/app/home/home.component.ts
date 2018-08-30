@@ -53,8 +53,8 @@ export class HomeComponent implements OnInit {
   }
 
   sendText(message: string) {
-    this.currentUserKey = this.userKeyPair.get(this.user.username);
-    let newMessage: Message = new Message(message, this.currentUserKey);
+    // this.currentUserKey = this.userKeyPair.get(this.user.username);
+    let newMessage: Message = new Message(message, this.userService.currentUserKey);
     this.chatService.addMessage(this.chatKey, newMessage);
   }
 
