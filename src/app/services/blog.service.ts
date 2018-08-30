@@ -33,7 +33,8 @@ export class BlogService {
         newPosts.push(tempPost);
       }
     });
-    return newPosts.reverse();
+    newPosts.reverse();
+    return newPosts;
   }
 
   addPostToBlog(blogKey: string, description: string, picture: string = "")

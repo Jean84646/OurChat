@@ -32,12 +32,14 @@ export class UserService {
     return users;
   }
 
-  // getUser(userKey: string){
-  //   return this.database.object('users/' + userKey);
-  // }
-
-  getCurrentUser() {
-    return this.currentUser;
+  getCurrentUser()
+  {
+    let tempUser;
+    let currentUser = this.database.object('users/'+this.currentUserKey);
+    currentUser.subscribe(user => {
+      tempUser = user;
+    });
+    return tempUser;
   }
 
   addUser(username: string,password: string)

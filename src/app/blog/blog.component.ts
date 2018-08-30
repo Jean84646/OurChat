@@ -17,20 +17,28 @@ export class BlogComponent implements OnInit
   posts: Post[];
   currentUser: User;
 
-  constructor(private blogService: BlogService, private userService: UserService) { }
-
-  ngOnInit()
-  {
-    let newPosts = [];
+  constructor(private blogService: BlogService, private userService: UserService) {
     this.currentUser = this.userService.getCurrentUser();
     this.blogKey = this.currentUser.blogKey;
     this.posts = this.blogService.getBlogByKey(this.blogKey);
   }
 
-  addPost(description: string)
+  ngOnInit()
   {
-    this.blogService.addPostToBlog(this.blogKey,description);
+    this.currentUser = this.userService.getCurrentUser();
+    this.blogKey = this.currentUser.blogKey;
     this.posts = this.blogService.getBlogByKey(this.blogKey);
+  }
+
+  addPost(description: string, img: string)
+  {
+    this.blogService.addPostToBlog(this.blogKey,description,img);
+    this.posts = this.blogService.getBlogByKey(this.blogKey);
+  }
+
+  showImg(imgUrl: string)
+  {
+    return (imgUrl != "");
   }
 
   timeSince(postTime: string)
