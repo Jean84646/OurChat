@@ -33,6 +33,7 @@ export class BlogService {
         newPosts.push(tempPost);
       }
     });
+    newPosts.reverse();
     return newPosts;
   }
 
