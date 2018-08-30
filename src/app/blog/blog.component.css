@@ -7,6 +7,17 @@
   border-style: none;
 }
 
+p {
+  color: #3C67C2;
+  font-size: 25px;
+}
+
+#blog {
+  border-style: solid;
+  border-color: #4A90E2;
+  border-radius: 4px;
+}
+
 button {
   width: 12%;
   color:#8e8e8e;

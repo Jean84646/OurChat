@@ -39,10 +39,11 @@
       <div *ngFor="let post of posts">
         <div class="card">
           <div class="card-body">
-            <p>{{post.description}}</p>
+            <p id="blog">{{post.description}}</p>
             <footer>Posted {{timeSince(post.time)}} ago.</footer>
           </div>
         </div>
       </div>
     </div>
+    <button (click)="logOut()" type="button" id="create-btn" class="login-page-btn">Log Out</button>
   </div>
