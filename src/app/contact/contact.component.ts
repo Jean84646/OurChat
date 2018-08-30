@@ -17,12 +17,12 @@ export class ContactComponent implements OnInit
   contacts: string[];
   show: boolean = false;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {
+    this.contacts = this.userService.getContacts();
+  }
   ngOnInit()
   {
     this.user = this.userService.getCurrentUser();
-    this.contacts = this.userService.getContacts();
-    console.log(this.contacts);
   }
   logOut() {
     this.userService.isLoggedIn = false;

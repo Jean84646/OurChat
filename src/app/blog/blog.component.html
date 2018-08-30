@@ -35,7 +35,7 @@
       </div>
       <div class="card center-text">
         <div class="card-body">
-          <textarea class="" name="post" rows="3" cols="80" [(ngModel)]="postText"></textarea>
+          <textarea class="" name="post" rows="3" cols="80" placeholder="Post Description" required [(ngModel)]="postText"></textarea>
           <button class="btn btn-submit" (click)="addPost(postText,postUrl)"> Post</button>
           <input type="text" [(ngModel)]="postUrl" placeholder="  Add image url">
         </div>
