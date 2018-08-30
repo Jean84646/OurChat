@@ -19,17 +19,40 @@ export class UserService {
     return this.users;
   }
 
-  getContacts(userKey: number){
-    var contacts = [];
-    var users = [];
-    contacts.push(this.users[userKey])
+  getContacts(){
+    let tempContacts = [];
+    let user = this.getCurrentUser();
+    this.getUsers().subscribe(userList =>
+      {
+      user.contacts.forEach(function(contactKey)
+      {
+        userList.forEach(function(user){
+          if(user.$key === contactKey)
+          {
+            tempContacts.push(user.username);
+          }
+        });
+      });
+    });
+    return tempContacts;
+  }
 
-    for(let i = 0; i <= 1; i ++){
-      if(contacts[i] === this.users[i]){
-        users.push(this.users)
-      }
-    }
-    return users;
+  getContactKeys(){
+    let tempContacts = [];
+    let user = this.getCurrentUser();
+    this.getUsers().subscribe(userList =>
+      {
+      user.contacts.forEach(function(contactKey)
+      {
+        userList.forEach(function(user){
+          if(user.$key === contactKey)
+          {
+            tempContacts.push(user.$key);
+          }
+        });
+      });
+    });
+    return tempContacts;
   }
 
   getCurrentUser()

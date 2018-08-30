@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { User } from '../models/user';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../services/user.service';
@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   userNamePair;
   userKeyPair;
   currentUserKey: string;
-  @ViewChild('chat-list') private myScrollContainer: ElementRef;
 
   constructor(private userService: UserService, private chatService: ChatService, private router: Router) { }
 
@@ -47,7 +46,6 @@ export class HomeComponent implements OnInit {
       this.messages = content.messages;
       // console.log(this.messages);
     });
-    this.scrollToBottom();
   }
 
   getName(userKey: string) {
@@ -66,7 +64,6 @@ export class HomeComponent implements OnInit {
     // this.currentUserKey = this.userKeyPair.get(this.user.username);
     let newMessage: Message = new Message(message, this.userService.currentUserKey);
     this.chatService.addMessage(this.chatKey, newMessage);
-    this.scrollToBottom();
   }
 
   logOut() {
@@ -74,10 +71,4 @@ export class HomeComponent implements OnInit {
     this.userService.currentUser = null;
     this.router.navigate(['']);
   }
-
-  scrollToBottom(): void {
-        try {
-            this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
-        } catch(err) { }
-    }
 }
