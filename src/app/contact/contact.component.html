@@ -4,7 +4,7 @@
         <div class="contact-component">
           <ul class="nav flex-column" >
             <div class="info">
-              <h2>Austin</h2>
+              <h2>{{this.user.username}}</h2>
               <img src="../assets/img/austin.jpg"/>
             </div>
             <div class="">
@@ -20,11 +20,18 @@
                 <a routerLink="/blog">| Blogs |</a>
             </div>
             <li class="nav-item">
-              <a class="nav-link active" *ngFor="let contact of contacts | contact : searchText">{{contact}}</a>
+              <a class="nav-link active" *ngFor="let contact of contacts | contact : searchText" (click)="showChatButton()" >{{contact}}</a>
+
             </li>
+
           </ul>
+
         </div>
+
       </div>
       <div id="chat" class="col-md-9 card">
+        <div *ngIf="show">
+        <button type="button" class="chat-btn">Send Message {{this.user.contact}}</button>
+        </div>
       </div>
   </div>
