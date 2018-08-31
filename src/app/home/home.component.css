@@ -4,18 +4,26 @@
   border-radius: 7px;
   padding: 3px;
   margin: 7px;
-  font-size: 60%;
+  float: right;
+  position: relative;
 }
 
 .other-message {
-  color:  #8e8e8e;
+  color:  #000000;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border-radius: 7px;
   padding: 3px;
   margin: 7px;
-  font-size: 50%;
+  float: left;
 }
 
 h3 {
   overflow-wrap: break-word;
+  font-size: 97%;
+  padding: 5px;
+}
+
+#textArea {
+  max-height: 50%;
+  border-radius: 7px;
 }
