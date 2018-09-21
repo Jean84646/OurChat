@@ -14,7 +14,7 @@
 
 ## Description
 
-This is a social networking website where users may create an account and chat with other users. User can chat and post to public blog.
+This is a social networking website where users may create an account and chat with other users. User can chat and post to public blog. Ongoing work in progress.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
